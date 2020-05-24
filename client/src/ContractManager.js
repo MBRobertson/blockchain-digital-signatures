@@ -1,4 +1,4 @@
-import BasicContract from "./contracts/BasicContract.json";
+// import BasicContract from "./contracts/BasicContract.json";
 import ContractManager from "./contracts/ContractManager.json";
 import PersonalContracts from "./contracts/PersonalContracts.json";
 
@@ -41,7 +41,7 @@ export const hasPersonalContracts = async () => {
   return parseInt(personalAddress) !== 0;
 }
 
-export const createOrGetPersonalContracts = async () => {
+const createOrGetPersonalContractAddress = async () => {
   const instance = await manager;
   const account = (await accounts)[0];
 
@@ -56,4 +56,19 @@ export const createOrGetPersonalContracts = async () => {
   await instance.methods.createContract().send({ from: account, gas: 1000000 });
 
   return await contract_address;
+}
+
+export const createOrGetPersonalContracts = async () => {
+  const w3 = await web3;
+  const address = await createOrGetPersonalContractAddress();
+
+  console.log("Creating PC interface at", address);
+
+  const contract = new w3.eth.Contract(
+    PersonalContracts.abi,
+    address
+  )
+
+  return contract;
+
 }
