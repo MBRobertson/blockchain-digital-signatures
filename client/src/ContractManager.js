@@ -53,7 +53,7 @@ const createOrGetPersonalContractAddress = async () => {
     triggerFunction = (contract_address) => resolve(contract_address);
   });
 
-  await instance.methods.createContract().send({ from: account, gas: 1000000 });
+  await instance.methods.createPersonalContracts(account).send({ from: account, gas: 1000000 });
 
   return await contract_address;
 }
@@ -62,13 +62,47 @@ export const createOrGetPersonalContracts = async () => {
   const w3 = await web3;
   const address = await createOrGetPersonalContractAddress();
 
-  console.log("Creating PC interface at", address);
-
   const contract = new w3.eth.Contract(
     PersonalContracts.abi,
     address
   )
 
-  return contract;
+  return new PersonalContractsContainer(contract);
 
+}
+
+class PersonalContractsContainer {
+  constructor(instance) {
+    this.instance = instance;
+    this.callbacks = []
+
+    instance.events.ContractAssigned((err, result) => {
+      // const assigner = result.returnValues[0];
+      const newContractAddress = result.returnValues[1];
+      
+      if (this.callbacks.length > 0) {
+        this.callbacks.shift()(newContractAddress);
+      }
+    })
+
+    this.getContracts.bind(this);
+    this.createNewContract.bind(this);
+  }
+
+  async getContracts() {
+    return await this.instance.methods.getContracts().call();
+  }
+
+  async createNewContract() {
+    const account = (await accounts)[0];
+    const managerInstance = await manager;
+
+    const newAddress = new Promise((resolve) => {
+      this.callbacks.push((address) => resolve(address))
+    })
+
+    await managerInstance.methods.createContract().send({ from: account, gas: 1000000 })
+
+    return await newAddress;
+  }
 }

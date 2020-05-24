@@ -46,6 +46,8 @@ class App extends Component {
           // If contracts are ready
           <div>
             <p>Ready!</p>
+            <button onClick={async () => console.log(await this.state.pc.getContracts())}>Get Contracts</button>
+            <button onClick={async () => console.log(await this.state.pc.createNewContract())}>Add Contract</button>
           </div>
           :
           // If there is no personal contracts setup

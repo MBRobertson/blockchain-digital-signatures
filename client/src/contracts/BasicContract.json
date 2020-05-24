@@ -74,12 +74,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"participant\",\"type\":\"address\"}],\"name\":\"addParticipant\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getContent\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"signature\",\"type\":\"string\"}],\"name\":\"sign\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol\":\"BasicContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol\":{\"keccak256\":\"0x15edfe91ffee53313eef6f47fc931c03783a77057486e5c2bba495332c32faa2\",\"urls\":[\"bzz-raw://a6ed37fa631c715b0058788ece3e2d3cc88ffbc50b42a9d4e34096a664cf68ed\",\"dweb:/ipfs/QmPB7w3PhcaCFgjpAtnpbsN1bqmu6Ueho59qsgA38ybnMq\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516108903803806108908339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040518060400160405280600581526020017f48656c6c6f000000000000000000000000000000000000000000000000000000815250600390805190602001906100cf9291906101d6565b506001600260008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060016000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505061027b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061021757805160ff1916838001178555610245565b82800160010185558215610245579182015b82811115610244578251825591602001919060010190610229565b5b5090506102529190610256565b5090565b61027891905b8082111561027457600081600090555060010161025c565b5090565b90565b6106068061028a6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806359016c791461005157806379d6348d146100d4578063d13319c41461018f578063dfafe10f146101ad575b600080fd5b6100596101f1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61018d600480360360208110156100ea57600080fd5b810190808035906020019064010000000081111561010757600080fd5b82018360208201111561011957600080fd5b8035906020019184600183028401116401000000008311171561013b57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610293565b005b61019761033d565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101c357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905090565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561033a5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020908051906020019061033892919061052c565b505b50565b60006003604051602001808280546001816001161561010002031660029004801561039f5780601f1061037d57610100808354040283529182019161039f565b820191906000526020600020905b81548152906001019060200180831161038b575b505091505060405160208183030381529060405280519060200120905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480156104655750600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16155b15610529576001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061056d57805160ff191683800117855561059b565b8280016001018555821561059b579182015b8281111561059a57825182559160200191906001019061057f565b5b5090506105a891906105ac565b5090565b6105ce91905b808211156105ca5760008160009055506001016105b2565b5090565b9056fea265627a7a7231582029a55bc80b12e408962758a4751138205b657dc164409b34d0f5968edc17092364736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806359016c791461005157806379d6348d146100d4578063d13319c41461018f578063dfafe10f146101ad575b600080fd5b6100596101f1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61018d600480360360208110156100ea57600080fd5b810190808035906020019064010000000081111561010757600080fd5b82018360208201111561011957600080fd5b8035906020019184600183028401116401000000008311171561013b57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610293565b005b61019761033d565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101c357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905090565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561033a5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020908051906020019061033892919061052c565b505b50565b60006003604051602001808280546001816001161561010002031660029004801561039f5780601f1061037d57610100808354040283529182019161039f565b820191906000526020600020905b81548152906001019060200180831161038b575b505091505060405160208183030381529060405280519060200120905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480156104655750600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16155b15610529576001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061056d57805160ff191683800117855561059b565b8280016001018555821561059b579182015b8281111561059a57825182559160200191906001019061057f565b5b5090506105a891906105ac565b5090565b6105ce91905b808211156105ca5760008160009055506001016105b2565b5090565b9056fea265627a7a7231582029a55bc80b12e408962758a4751138205b657dc164409b34d0f5968edc17092364736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"participant\",\"type\":\"address\"}],\"name\":\"addParticipant\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getContent\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"signature\",\"type\":\"string\"}],\"name\":\"sign\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol\":\"BasicContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol\":{\"keccak256\":\"0xe0bfec6bea62eac87927920f03a9777f95c4e89db97c6f4d9633cdeb82639d52\",\"urls\":[\"bzz-raw://f5f3bd7e50bae99c4e37f76872a7df032b2bc8fd36031d61983bf7a9f121dc5d\",\"dweb:/ipfs/QmTrYv32ay2jjjpvxRCoCd6UMSMkosgVbrvjgk2V8P4xFU\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108903803806108908339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040518060400160405280600581526020017f48656c6c6f000000000000000000000000000000000000000000000000000000815250600390805190602001906100cf9291906101d6565b506001600260008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060016000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505061027b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061021757805160ff1916838001178555610245565b82800160010185558215610245579182015b82811115610244578251825591602001919060010190610229565b5b5090506102529190610256565b5090565b61027891905b8082111561027457600081600090555060010161025c565b5090565b90565b6106068061028a6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806359016c791461005157806379d6348d146100d4578063d13319c41461018f578063dfafe10f146101ad575b600080fd5b6100596101f1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61018d600480360360208110156100ea57600080fd5b810190808035906020019064010000000081111561010757600080fd5b82018360208201111561011957600080fd5b8035906020019184600183028401116401000000008311171561013b57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610293565b005b61019761033d565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101c357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905090565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561033a5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020908051906020019061033892919061052c565b505b50565b60006003604051602001808280546001816001161561010002031660029004801561039f5780601f1061037d57610100808354040283529182019161039f565b820191906000526020600020905b81548152906001019060200180831161038b575b505091505060405160208183030381529060405280519060200120905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480156104655750600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16155b15610529576001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061056d57805160ff191683800117855561059b565b8280016001018555821561059b579182015b8281111561059a57825182559160200191906001019061057f565b5b5090506105a891906105ac565b5090565b6105ce91905b808211156105ca5760008160009055506001016105b2565b5090565b9056fea265627a7a72315820ad825cb4d9a8f32555ac750340f28e71fbe69bc29071b06d442541b294d90d6e64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806359016c791461005157806379d6348d146100d4578063d13319c41461018f578063dfafe10f146101ad575b600080fd5b6100596101f1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61018d600480360360208110156100ea57600080fd5b810190808035906020019064010000000081111561010757600080fd5b82018360208201111561011957600080fd5b8035906020019184600183028401116401000000008311171561013b57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610293565b005b61019761033d565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101c357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103bf565b005b606060038054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102895780601f1061025e57610100808354040283529160200191610289565b820191906000526020600020905b81548152906001019060200180831161026c57829003601f168201915b5050505050905090565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff161561033a5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020908051906020019061033892919061052c565b505b50565b60006003604051602001808280546001816001161561010002031660029004801561039f5780601f1061037d57610100808354040283529182019161039f565b820191906000526020600020905b81548152906001019060200180831161038b575b505091505060405160208183030381529060405280519060200120905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480156104655750600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16155b15610529576001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555060018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061056d57805160ff191683800117855561059b565b8280016001018555821561059b579182015b8281111561059a57825182559160200191906001019061057f565b5b5090506105a891906105ac565b5090565b6105ce91905b808211156105ca5760008160009055506001016105b2565b5090565b9056fea265627a7a72315820ad825cb4d9a8f32555ac750340f28e71fbe69bc29071b06d442541b294d90d6e64736f6c63430005100032",
   "sourceMap": "34:994:0:-;;;204:146;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:146:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;204:146:0;;;;;;;;;;;;;;;;254:7;246:5;;:15;;;;;;;;;;;;;;;;;;267:17;;;;;;;;;;;;;;;;;:7;:17;;;;;;;;;;;;:::i;:::-;;311:4;290:11;:18;302:5;;;;;;;;;;;290:18;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;321:12;339:5;;;;;;;;;;;321:24;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;321:24:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;204:146;34:994;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
   "deployedSourceMap": "34:994:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:994:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;835:83;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;835:83:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;605:226;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;605:226:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;605:226:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;605:226:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;605:226:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;605:226:0;;;;;;;;;;;;;;;:::i;:::-;;922:103;;;:::i;:::-;;;;;;;;;;;;;;;;;;;354:247;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;354:247:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;835:83;878:13;906:7;899:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;835:83;:::o;605:226::-;712:11;:23;724:10;712:23;;;;;;;;;;;;;;;;;;;;;;;;;708:119;;;811:9;786:10;:22;797:10;786:22;;;;;;;;;;;;;;;:34;;;;;;;;;;;;:::i;:::-;;708:119;605:226;:::o;922:103::-;962:7;1011;994:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;49:4:-1;39:7;30;26:21;22:32;13:7;6:49;994:25:0;;;984:36;;;;;;977:43;;922:103;:::o;354:247::-;477:5;;;;;;;;;;;463:19;;:10;:19;;;:48;;;;;487:11;:24;499:11;487:24;;;;;;;;;;;;;;;;;;;;;;;;;486:25;463:48;459:138;;;548:4;521:11;:24;533:11;521:24;;;;;;;;;;;;;;;;:31;;;;;;;;;;;;;;;;;;560:12;578:11;560:30;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;560:30:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;459:138;354:247;:::o;34:994::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity >=0.4.21 <0.7.0;\n\ncontract BasicContract {\n  address owner;\n  address[] participants;\n  mapping(address => bool) permissions;\n  string content;\n  mapping(address => string) signatures;\n\n  constructor(address creator) public {\n    owner = creator;\n    content = \"Hello\";\n    permissions[owner] = true;\n    participants.push(owner);\n  }\n\n  function addParticipant(address participant) public {\n    // Make sure not to readd  the same person\n    if (msg.sender == owner && !permissions[participant]) {\n      permissions[participant] = true;\n      participants.push(participant);\n    }\n  }\n\n  function sign(string memory signature) public {\n    // Check they are allowed to sign the contract\n    if (permissions[msg.sender]) {\n      // TODO: Validate using ECRecover\n\n      signatures[msg.sender] = signature;\n    }\n  }\n\n  function getContent() public view returns (string memory) {\n    return content;\n  }\n\n  function getHash() public view returns (bytes32) {\n    return keccak256(abi.encodePacked(content));\n  }\n\n}\n\ncontract PersonalContracts {\n  address owner;\n  BasicContract[] contracts;\n\n  event ContractAssigned(address creator, address location);\n\n  function addContract(BasicContract c) public {\n    contracts.push(c);\n    emit ContractAssigned(msg.sender, address(c));\n  }\n\n  constructor() public {\n    owner = msg.sender;\n  }\n}\n\ncontract ContractManager {\n  mapping(address => PersonalContracts) personalContracts;\n\n  function getPersonalContracts() public view returns (address) {\n    return address(personalContracts[msg.sender]);\n  }\n\n  event PersonalContractsCreated(address owner, address location);\n\n  function createPersonalContracts(address owner) public {\n    PersonalContracts pContracts = new PersonalContracts();\n    personalContracts[owner] = pContracts;\n    emit PersonalContractsCreated(owner, address(pContracts));\n  }\n\n  function getOrCreatePersonalContracts(address owner) private returns (PersonalContracts) {\n    if (address(personalContracts[owner]) == address(0)) {\n      createPersonalContracts(owner);\n    }\n\n    return personalContracts[owner];\n  }\n\n\n  function createContract() public {\n    BasicContract newContract = new BasicContract(msg.sender);\n\n    // Automatically assign the contract to the creators personal contracts\n    PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);\n    pContracts.addContract(newContract);\n  }\n}",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\ncontract BasicContract {\n  address owner;\n  address[] participants;\n  mapping(address => bool) permissions;\n  string content;\n  mapping(address => string) signatures;\n\n  constructor(address creator) public {\n    owner = creator;\n    content = \"Hello\";\n    permissions[owner] = true;\n    participants.push(owner);\n  }\n\n  function addParticipant(address participant) public {\n    // Make sure not to readd  the same person\n    if (msg.sender == owner && !permissions[participant]) {\n      permissions[participant] = true;\n      participants.push(participant);\n    }\n  }\n\n  function sign(string memory signature) public {\n    // Check they are allowed to sign the contract\n    if (permissions[msg.sender]) {\n      // TODO: Validate using ECRecover\n\n      signatures[msg.sender] = signature;\n    }\n  }\n\n  function getContent() public view returns (string memory) {\n    return content;\n  }\n\n  function getHash() public view returns (bytes32) {\n    return keccak256(abi.encodePacked(content));\n  }\n\n}\n\ncontract PersonalContracts {\n  address owner;\n  BasicContract[] contracts;\n\n  event ContractAssigned(address creator, address location);\n\n  function addContract(BasicContract c) public {\n    contracts.push(c);\n    emit ContractAssigned(msg.sender, address(c));\n  }\n\n  function getContracts() public view returns(BasicContract[] memory) {\n      return contracts;\n  }\n\n  constructor() public {\n    owner = msg.sender;\n  }\n}\n\ncontract ContractManager {\n  mapping(address => PersonalContracts) personalContracts;\n\n  function getPersonalContracts() public view returns (address) {\n    return address(personalContracts[msg.sender]);\n  }\n\n  event PersonalContractsCreated(address owner, address location);\n\n  function createPersonalContracts(address owner) public {\n    PersonalContracts pContracts = new PersonalContracts();\n    personalContracts[owner] = pContracts;\n    emit PersonalContractsCreated(owner, address(pContracts));\n  }\n\n  function getOrCreatePersonalContracts(address owner) private returns (PersonalContracts) {\n    if (address(personalContracts[owner]) == address(0)) {\n      createPersonalContracts(owner);\n    }\n\n    return personalContracts[owner];\n  }\n\n\n  function createContract() public {\n    BasicContract newContract = new BasicContract(msg.sender);\n\n    // Automatically assign the contract to the creators personal contracts\n    PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);\n    pContracts.addContract(newContract);\n  }\n}",
   "sourcePath": "C:\\Users\\Michael\\Documents\\Programming\\truffle-react\\contracts\\ContractManager.sol",
   "ast": {
     "absolutePath": "/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol",
@@ -88,13 +88,13 @@
         112
       ],
       "ContractManager": [
-        254
+        263
       ],
       "PersonalContracts": [
-        153
+        162
       ]
     },
-    "id": 255,
+    "id": 264,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -647,7 +647,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
+                          "referencedDeclaration": 315,
                           "src": "463:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -999,7 +999,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 306,
+                        "referencedDeclaration": 315,
                         "src": "724:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1072,7 +1072,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 306,
+                                "referencedDeclaration": 315,
                                 "src": "797:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1305,7 +1305,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 293,
+                            "referencedDeclaration": 302,
                             "src": "994:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -1352,7 +1352,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 300,
+                      "referencedDeclaration": 309,
                       "src": "984:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1433,7 +1433,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 255,
+        "scope": 264,
         "src": "34:994:0"
       },
       {
@@ -1442,9 +1442,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 153,
+        "id": 162,
         "linearizedBaseContracts": [
-          153
+          162
         ],
         "name": "PersonalContracts",
         "nodeType": "ContractDefinition",
@@ -1454,7 +1454,7 @@
             "id": 114,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 153,
+            "scope": 162,
             "src": "1061:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1481,7 +1481,7 @@
             "id": 117,
             "name": "contracts",
             "nodeType": "VariableDeclaration",
-            "scope": 153,
+            "scope": 162,
             "src": "1078:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1673,7 +1673,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
+                          "referencedDeclaration": 315,
                           "src": "1266:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1836,7 +1836,7 @@
               "parameters": [],
               "src": "1215:0:0"
             },
-            "scope": 153,
+            "scope": 162,
             "src": "1170:124:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1846,24 +1846,115 @@
             "body": {
               "id": 151,
               "nodeType": "Block",
-              "src": "1319:29:0",
+              "src": "1366:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "id": 149,
+                    "name": "contracts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 117,
+                    "src": "1381:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_storage",
+                      "typeString": "contract BasicContract[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 148,
+                  "id": 150,
+                  "nodeType": "Return",
+                  "src": "1374:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 152,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getContracts",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:2:0"
+            },
+            "returnParameters": {
+              "id": 148,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 147,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 152,
+                  "src": "1342:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_memory_ptr",
+                    "typeString": "contract BasicContract[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 145,
+                      "name": "BasicContract",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 112,
+                      "src": "1342:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BasicContract_$112",
+                        "typeString": "contract BasicContract"
+                      }
+                    },
+                    "id": 146,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1342:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_storage_ptr",
+                      "typeString": "contract BasicContract[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1341:24:0"
+            },
+            "scope": 162,
+            "src": "1298:97:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 160,
+              "nodeType": "Block",
+              "src": "1420:29:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 158,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 146,
+                      "id": 155,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 114,
-                      "src": "1325:5:0",
+                      "src": "1426:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -1875,18 +1966,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 147,
+                        "id": 156,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 306,
-                        "src": "1333:3:0",
+                        "referencedDeclaration": 315,
+                        "src": "1434:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 148,
+                      "id": 157,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1894,109 +1985,109 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "1333:10:0",
+                      "src": "1434:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "1325:18:0",
+                    "src": "1426:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 150,
+                  "id": 159,
                   "nodeType": "ExpressionStatement",
-                  "src": "1325:18:0"
+                  "src": "1426:18:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 152,
+            "id": 161,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 144,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1309:2:0"
+              "src": "1410:2:0"
             },
             "returnParameters": {
-              "id": 145,
+              "id": 154,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1319:0:0"
+              "src": "1420:0:0"
             },
-            "scope": 153,
-            "src": "1298:50:0",
+            "scope": 162,
+            "src": "1399:50:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 255,
-        "src": "1030:320:0"
+        "scope": 264,
+        "src": "1030:421:0"
       },
       {
         "baseContracts": [],
         "contractDependencies": [
           112,
-          153
+          162
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 254,
+        "id": 263,
         "linearizedBaseContracts": [
-          254
+          263
         ],
         "name": "ContractManager",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 157,
+            "id": 166,
             "name": "personalContracts",
             "nodeType": "VariableDeclaration",
-            "scope": 254,
-            "src": "1381:55:0",
+            "scope": 263,
+            "src": "1482:55:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
               "typeString": "mapping(address => contract PersonalContracts)"
             },
             "typeName": {
-              "id": 156,
+              "id": 165,
               "keyType": {
-                "id": 154,
+                "id": 163,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "1389:7:0",
+                "src": "1490:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "1381:37:0",
+              "src": "1482:37:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                 "typeString": "mapping(address => contract PersonalContracts)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 155,
+                "id": 164,
                 "name": "PersonalContracts",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 153,
-                "src": "1400:17:0",
+                "referencedDeclaration": 162,
+                "src": "1501:17:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                  "typeIdentifier": "t_contract$_PersonalContracts_$162",
                   "typeString": "contract PersonalContracts"
                 }
               }
@@ -2006,9 +2097,9 @@
           },
           {
             "body": {
-              "id": 169,
+              "id": 178,
               "nodeType": "Block",
-              "src": "1503:56:0",
+              "src": "1604:56:0",
               "statements": [
                 {
                   "expression": {
@@ -2018,34 +2109,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 163,
+                          "id": 172,
                           "name": "personalContracts",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 157,
-                          "src": "1524:17:0",
+                          "referencedDeclaration": 166,
+                          "src": "1625:17:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                             "typeString": "mapping(address => contract PersonalContracts)"
                           }
                         },
-                        "id": 166,
+                        "id": 175,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 164,
+                            "id": 173,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 306,
-                            "src": "1542:3:0",
+                            "referencedDeclaration": 315,
+                            "src": "1643:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 165,
+                          "id": 174,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2053,7 +2144,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1542:10:0",
+                          "src": "1643:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -2064,9 +2155,9 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1524:29:0",
+                        "src": "1625:29:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       }
@@ -2074,24 +2165,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       ],
-                      "id": 162,
+                      "id": 171,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "nodeType": "ElementaryTypeNameExpression",
-                      "src": "1516:7:0",
+                      "src": "1617:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_type$_t_address_$",
                         "typeString": "type(address)"
                       },
                       "typeName": "address"
                     },
-                    "id": 167,
+                    "id": 176,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2099,43 +2190,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1516:38:0",
+                    "src": "1617:38:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 161,
-                  "id": 168,
+                  "functionReturnParameters": 170,
+                  "id": 177,
                   "nodeType": "Return",
-                  "src": "1509:45:0"
+                  "src": "1610:45:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 170,
+            "id": 179,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 158,
+              "id": 167,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1470:2:0"
+              "src": "1571:2:0"
             },
             "returnParameters": {
-              "id": 161,
+              "id": 170,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 160,
+                  "id": 169,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 170,
-                  "src": "1494:7:0",
+                  "scope": 179,
+                  "src": "1595:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2143,10 +2234,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 159,
+                    "id": 168,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1494:7:0",
+                    "src": "1595:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2157,10 +2248,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1493:9:0"
+              "src": "1594:9:0"
             },
-            "scope": 254,
-            "src": "1441:118:0",
+            "scope": 263,
+            "src": "1542:118:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -2168,21 +2259,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 176,
+            "id": 185,
             "name": "PersonalContractsCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 175,
+              "id": 184,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 172,
+                  "id": 181,
                   "indexed": false,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 176,
-                  "src": "1594:13:0",
+                  "scope": 185,
+                  "src": "1695:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2190,10 +2281,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 171,
+                    "id": 180,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1594:7:0",
+                    "src": "1695:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2205,12 +2296,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 174,
+                  "id": 183,
                   "indexed": false,
                   "name": "location",
                   "nodeType": "VariableDeclaration",
-                  "scope": 176,
-                  "src": "1609:16:0",
+                  "scope": 185,
+                  "src": "1710:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2218,10 +2309,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 173,
+                    "id": 182,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1609:7:0",
+                    "src": "1710:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2232,43 +2323,43 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1593:33:0"
+              "src": "1694:33:0"
             },
-            "src": "1563:64:0"
+            "src": "1664:64:0"
           },
           {
             "body": {
-              "id": 200,
+              "id": 209,
               "nodeType": "Block",
-              "src": "1686:171:0",
+              "src": "1787:171:0",
               "statements": [
                 {
                   "assignments": [
-                    182
+                    191
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 182,
+                      "id": 191,
                       "name": "pContracts",
                       "nodeType": "VariableDeclaration",
-                      "scope": 200,
-                      "src": "1692:28:0",
+                      "scope": 209,
+                      "src": "1793:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 181,
+                        "id": 190,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "1692:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "1793:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
@@ -2276,37 +2367,37 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 186,
+                  "id": 195,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 184,
+                      "id": 193,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "NewExpression",
-                      "src": "1723:21:0",
+                      "src": "1824:21:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "function () returns (contract PersonalContracts)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 183,
+                        "id": 192,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "1727:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "1828:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       }
                     },
-                    "id": 185,
+                    "id": 194,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2314,19 +2405,19 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1723:23:0",
+                    "src": "1824:23:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1692:54:0"
+                  "src": "1793:54:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 191,
+                    "id": 200,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2335,26 +2426,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 187,
+                        "id": 196,
                         "name": "personalContracts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 157,
-                        "src": "1752:17:0",
+                        "referencedDeclaration": 166,
+                        "src": "1853:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                           "typeString": "mapping(address => contract PersonalContracts)"
                         }
                       },
-                      "id": 189,
+                      "id": 198,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 188,
+                        "id": 197,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 178,
-                        "src": "1770:5:0",
+                        "referencedDeclaration": 187,
+                        "src": "1871:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2365,9 +2456,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "1752:24:0",
+                      "src": "1853:24:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       }
                     },
@@ -2375,26 +2466,26 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 190,
+                      "id": 199,
                       "name": "pContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 182,
-                      "src": "1779:10:0",
+                      "referencedDeclaration": 191,
+                      "src": "1880:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       }
                     },
-                    "src": "1752:37:0",
+                    "src": "1853:37:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
-                  "id": 192,
+                  "id": 201,
                   "nodeType": "ExpressionStatement",
-                  "src": "1752:37:0"
+                  "src": "1853:37:0"
                 },
                 {
                   "eventCall": {
@@ -2402,12 +2493,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 194,
+                        "id": 203,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 178,
-                        "src": "1825:5:0",
+                        "referencedDeclaration": 187,
+                        "src": "1926:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2418,14 +2509,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 196,
+                            "id": 205,
                             "name": "pContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 182,
-                            "src": "1840:10:0",
+                            "referencedDeclaration": 191,
+                            "src": "1941:10:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                              "typeIdentifier": "t_contract$_PersonalContracts_$162",
                               "typeString": "contract PersonalContracts"
                             }
                           }
@@ -2433,24 +2524,24 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                              "typeIdentifier": "t_contract$_PersonalContracts_$162",
                               "typeString": "contract PersonalContracts"
                             }
                           ],
-                          "id": 195,
+                          "id": 204,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1832:7:0",
+                          "src": "1933:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": "address"
                         },
-                        "id": 197,
+                        "id": 206,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2458,7 +2549,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1832:19:0",
+                        "src": "1933:19:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2476,18 +2567,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 193,
+                      "id": 202,
                       "name": "PersonalContractsCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 176,
-                      "src": "1800:24:0",
+                      "referencedDeclaration": 185,
+                      "src": "1901:24:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
                         "typeString": "function (address,address)"
                       }
                     },
-                    "id": 198,
+                    "id": 207,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2495,36 +2586,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1800:52:0",
+                    "src": "1901:52:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 199,
+                  "id": 208,
                   "nodeType": "EmitStatement",
-                  "src": "1795:57:0"
+                  "src": "1896:57:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 201,
+            "id": 210,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createPersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 179,
+              "id": 188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 178,
+                  "id": 187,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 201,
-                  "src": "1664:13:0",
+                  "scope": 210,
+                  "src": "1765:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2532,10 +2623,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 177,
+                    "id": 186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1664:7:0",
+                    "src": "1765:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2546,25 +2637,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1663:15:0"
+              "src": "1764:15:0"
             },
             "returnParameters": {
-              "id": 180,
+              "id": 189,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1686:0:0"
+              "src": "1787:0:0"
             },
-            "scope": 254,
-            "src": "1631:226:0",
+            "scope": 263,
+            "src": "1732:226:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 227,
+              "id": 236,
               "nodeType": "Block",
-              "src": "1950:146:0",
+              "src": "2051:146:0",
               "statements": [
                 {
                   "condition": {
@@ -2573,7 +2664,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 216,
+                    "id": 225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2585,26 +2676,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 209,
+                            "id": 218,
                             "name": "personalContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 157,
-                            "src": "1968:17:0",
+                            "referencedDeclaration": 166,
+                            "src": "2069:17:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                               "typeString": "mapping(address => contract PersonalContracts)"
                             }
                           },
-                          "id": 211,
+                          "id": 220,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 210,
+                            "id": 219,
                             "name": "owner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 203,
-                            "src": "1986:5:0",
+                            "referencedDeclaration": 212,
+                            "src": "2087:5:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -2615,9 +2706,9 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1968:24:0",
+                          "src": "2069:24:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                            "typeIdentifier": "t_contract$_PersonalContracts_$162",
                             "typeString": "contract PersonalContracts"
                           }
                         }
@@ -2625,24 +2716,24 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                            "typeIdentifier": "t_contract$_PersonalContracts_$162",
                             "typeString": "contract PersonalContracts"
                           }
                         ],
-                        "id": 208,
+                        "id": 217,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "1960:7:0",
+                        "src": "2061:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": "address"
                       },
-                      "id": 212,
+                      "id": 221,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2650,7 +2741,7 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "1960:33:0",
+                      "src": "2061:33:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -2664,14 +2755,14 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 214,
+                          "id": 223,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "2005:1:0",
+                          "src": "2106:1:0",
                           "subdenomination": null,
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
@@ -2687,20 +2778,20 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 213,
+                        "id": 222,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "1997:7:0",
+                        "src": "2098:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": "address"
                       },
-                      "id": 215,
+                      "id": 224,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2708,26 +2799,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "1997:10:0",
+                      "src": "2098:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "1960:47:0",
+                    "src": "2061:47:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 222,
+                  "id": 231,
                   "nodeType": "IfStatement",
-                  "src": "1956:98:0",
+                  "src": "2057:98:0",
                   "trueBody": {
-                    "id": 221,
+                    "id": 230,
                     "nodeType": "Block",
-                    "src": "2009:45:0",
+                    "src": "2110:45:0",
                     "statements": [
                       {
                         "expression": {
@@ -2735,12 +2826,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 218,
+                              "id": 227,
                               "name": "owner",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 203,
-                              "src": "2041:5:0",
+                              "referencedDeclaration": 212,
+                              "src": "2142:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2754,18 +2845,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 217,
+                            "id": 226,
                             "name": "createPersonalContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 201,
-                            "src": "2017:23:0",
+                            "referencedDeclaration": 210,
+                            "src": "2118:23:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 219,
+                          "id": 228,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2773,15 +2864,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "2017:30:0",
+                          "src": "2118:30:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 220,
+                        "id": 229,
                         "nodeType": "ExpressionStatement",
-                        "src": "2017:30:0"
+                        "src": "2118:30:0"
                       }
                     ]
                   }
@@ -2791,26 +2882,26 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 223,
+                      "id": 232,
                       "name": "personalContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 157,
-                      "src": "2067:17:0",
+                      "referencedDeclaration": 166,
+                      "src": "2168:17:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "mapping(address => contract PersonalContracts)"
                       }
                     },
-                    "id": 225,
+                    "id": 234,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 224,
+                      "id": 233,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 203,
-                      "src": "2085:5:0",
+                      "referencedDeclaration": 212,
+                      "src": "2186:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -2821,37 +2912,37 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "2067:24:0",
+                    "src": "2168:24:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
-                  "functionReturnParameters": 207,
-                  "id": 226,
+                  "functionReturnParameters": 216,
+                  "id": 235,
                   "nodeType": "Return",
-                  "src": "2060:31:0"
+                  "src": "2161:31:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 228,
+            "id": 237,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getOrCreatePersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 204,
+              "id": 213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 203,
+                  "id": 212,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 228,
-                  "src": "1899:13:0",
+                  "scope": 237,
+                  "src": "2000:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2859,10 +2950,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 202,
+                    "id": 211,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1899:7:0",
+                    "src": "2000:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2873,34 +2964,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1898:15:0"
+              "src": "1999:15:0"
             },
             "returnParameters": {
-              "id": 207,
+              "id": 216,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 206,
+                  "id": 215,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 228,
-                  "src": "1931:17:0",
+                  "scope": 237,
+                  "src": "2032:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                    "typeIdentifier": "t_contract$_PersonalContracts_$162",
                     "typeString": "contract PersonalContracts"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 205,
+                    "id": 214,
                     "name": "PersonalContracts",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 153,
-                    "src": "1931:17:0",
+                    "referencedDeclaration": 162,
+                    "src": "2032:17:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
@@ -2908,32 +2999,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1930:19:0"
+              "src": "2031:19:0"
             },
-            "scope": 254,
-            "src": "1861:235:0",
+            "scope": 263,
+            "src": "1962:235:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "private"
           },
           {
             "body": {
-              "id": 252,
+              "id": 261,
               "nodeType": "Block",
-              "src": "2134:263:0",
+              "src": "2235:263:0",
               "statements": [
                 {
                   "assignments": [
-                    232
+                    241
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 232,
+                      "id": 241,
                       "name": "newContract",
                       "nodeType": "VariableDeclaration",
-                      "scope": 252,
-                      "src": "2140:25:0",
+                      "scope": 261,
+                      "src": "2241:25:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2942,11 +3033,11 @@
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 231,
+                        "id": 240,
                         "name": "BasicContract",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 112,
-                        "src": "2140:13:0",
+                        "src": "2241:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
@@ -2956,7 +3047,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 238,
+                  "id": 247,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -2964,18 +3055,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 235,
+                          "id": 244,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
-                          "src": "2186:3:0",
+                          "referencedDeclaration": 315,
+                          "src": "2287:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 236,
+                        "id": 245,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2983,7 +3074,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "2186:10:0",
+                        "src": "2287:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -2997,31 +3088,31 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 234,
+                      "id": 243,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "NewExpression",
-                      "src": "2168:17:0",
+                      "src": "2269:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_BasicContract_$112_$",
                         "typeString": "function (address) returns (contract BasicContract)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 233,
+                        "id": 242,
                         "name": "BasicContract",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 112,
-                        "src": "2172:13:0",
+                        "src": "2273:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
                         }
                       }
                     },
-                    "id": 237,
+                    "id": 246,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3029,42 +3120,42 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2168:29:0",
+                    "src": "2269:29:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_BasicContract_$112",
                       "typeString": "contract BasicContract"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2140:57:0"
+                  "src": "2241:57:0"
                 },
                 {
                   "assignments": [
-                    240
+                    249
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 240,
+                      "id": 249,
                       "name": "pContracts",
                       "nodeType": "VariableDeclaration",
-                      "scope": 252,
-                      "src": "2280:28:0",
+                      "scope": 261,
+                      "src": "2381:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 239,
+                        "id": 248,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "2280:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "2381:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
@@ -3072,7 +3163,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 245,
+                  "id": 254,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -3080,18 +3171,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 242,
+                          "id": 251,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
-                          "src": "2340:3:0",
+                          "referencedDeclaration": 315,
+                          "src": "2441:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 243,
+                        "id": 252,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3099,7 +3190,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "2340:10:0",
+                        "src": "2441:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3113,18 +3204,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 241,
+                      "id": 250,
                       "name": "getOrCreatePersonalContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
-                      "src": "2311:28:0",
+                      "referencedDeclaration": 237,
+                      "src": "2412:28:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "function (address) returns (contract PersonalContracts)"
                       }
                     },
-                    "id": 244,
+                    "id": 253,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3132,14 +3223,14 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2311:40:0",
+                    "src": "2412:40:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2280:71:0"
+                  "src": "2381:71:0"
                 },
                 {
                   "expression": {
@@ -3147,12 +3238,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 249,
+                        "id": 258,
                         "name": "newContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 232,
-                        "src": "2380:11:0",
+                        "referencedDeclaration": 241,
+                        "src": "2481:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
@@ -3168,18 +3259,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 246,
+                        "id": 255,
                         "name": "pContracts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
-                        "src": "2357:10:0",
+                        "referencedDeclaration": 249,
+                        "src": "2458:10:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
-                      "id": 248,
+                      "id": 257,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3187,13 +3278,13 @@
                       "memberName": "addContract",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 143,
-                      "src": "2357:22:0",
+                      "src": "2458:22:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_contract$_BasicContract_$112_$returns$__$",
                         "typeString": "function (contract BasicContract) external"
                       }
                     },
-                    "id": 250,
+                    "id": 259,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3201,49 +3292,49 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2357:35:0",
+                    "src": "2458:35:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 251,
+                  "id": 260,
                   "nodeType": "ExpressionStatement",
-                  "src": "2357:35:0"
+                  "src": "2458:35:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 253,
+            "id": 262,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 229,
+              "id": 238,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2124:2:0"
+              "src": "2225:2:0"
             },
             "returnParameters": {
-              "id": 230,
+              "id": 239,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2134:0:0"
+              "src": "2235:0:0"
             },
-            "scope": 254,
-            "src": "2101:296:0",
+            "scope": 263,
+            "src": "2202:296:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 255,
-        "src": "1352:1047:0"
+        "scope": 264,
+        "src": "1453:1047:0"
       }
     ],
-    "src": "0:2399:0"
+    "src": "0:2500:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Michael/Documents/Programming/truffle-react/contracts/ContractManager.sol",
@@ -3252,13 +3343,13 @@
         112
       ],
       "ContractManager": [
-        254
+        263
       ],
       "PersonalContracts": [
-        153
+        162
       ]
     },
-    "id": 255,
+    "id": 264,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -3811,7 +3902,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
+                          "referencedDeclaration": 315,
                           "src": "463:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4163,7 +4254,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 306,
+                        "referencedDeclaration": 315,
                         "src": "724:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -4236,7 +4327,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 306,
+                                "referencedDeclaration": 315,
                                 "src": "797:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4469,7 +4560,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 293,
+                            "referencedDeclaration": 302,
                             "src": "994:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -4516,7 +4607,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 300,
+                      "referencedDeclaration": 309,
                       "src": "984:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4597,7 +4688,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 255,
+        "scope": 264,
         "src": "34:994:0"
       },
       {
@@ -4606,9 +4697,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 153,
+        "id": 162,
         "linearizedBaseContracts": [
-          153
+          162
         ],
         "name": "PersonalContracts",
         "nodeType": "ContractDefinition",
@@ -4618,7 +4709,7 @@
             "id": 114,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 153,
+            "scope": 162,
             "src": "1061:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -4645,7 +4736,7 @@
             "id": 117,
             "name": "contracts",
             "nodeType": "VariableDeclaration",
-            "scope": 153,
+            "scope": 162,
             "src": "1078:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -4837,7 +4928,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
+                          "referencedDeclaration": 315,
                           "src": "1266:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5000,7 +5091,7 @@
               "parameters": [],
               "src": "1215:0:0"
             },
-            "scope": 153,
+            "scope": 162,
             "src": "1170:124:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5010,24 +5101,115 @@
             "body": {
               "id": 151,
               "nodeType": "Block",
-              "src": "1319:29:0",
+              "src": "1366:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "id": 149,
+                    "name": "contracts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 117,
+                    "src": "1381:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_storage",
+                      "typeString": "contract BasicContract[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 148,
+                  "id": 150,
+                  "nodeType": "Return",
+                  "src": "1374:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 152,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getContracts",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:2:0"
+            },
+            "returnParameters": {
+              "id": 148,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 147,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 152,
+                  "src": "1342:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_memory_ptr",
+                    "typeString": "contract BasicContract[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 145,
+                      "name": "BasicContract",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 112,
+                      "src": "1342:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BasicContract_$112",
+                        "typeString": "contract BasicContract"
+                      }
+                    },
+                    "id": 146,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1342:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_BasicContract_$112_$dyn_storage_ptr",
+                      "typeString": "contract BasicContract[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1341:24:0"
+            },
+            "scope": 162,
+            "src": "1298:97:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 160,
+              "nodeType": "Block",
+              "src": "1420:29:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 158,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 146,
+                      "id": 155,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 114,
-                      "src": "1325:5:0",
+                      "src": "1426:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5039,18 +5221,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 147,
+                        "id": 156,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 306,
-                        "src": "1333:3:0",
+                        "referencedDeclaration": 315,
+                        "src": "1434:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 148,
+                      "id": 157,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5058,109 +5240,109 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "1333:10:0",
+                      "src": "1434:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "1325:18:0",
+                    "src": "1426:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 150,
+                  "id": 159,
                   "nodeType": "ExpressionStatement",
-                  "src": "1325:18:0"
+                  "src": "1426:18:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 152,
+            "id": 161,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 144,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1309:2:0"
+              "src": "1410:2:0"
             },
             "returnParameters": {
-              "id": 145,
+              "id": 154,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1319:0:0"
+              "src": "1420:0:0"
             },
-            "scope": 153,
-            "src": "1298:50:0",
+            "scope": 162,
+            "src": "1399:50:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 255,
-        "src": "1030:320:0"
+        "scope": 264,
+        "src": "1030:421:0"
       },
       {
         "baseContracts": [],
         "contractDependencies": [
           112,
-          153
+          162
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 254,
+        "id": 263,
         "linearizedBaseContracts": [
-          254
+          263
         ],
         "name": "ContractManager",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 157,
+            "id": 166,
             "name": "personalContracts",
             "nodeType": "VariableDeclaration",
-            "scope": 254,
-            "src": "1381:55:0",
+            "scope": 263,
+            "src": "1482:55:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
               "typeString": "mapping(address => contract PersonalContracts)"
             },
             "typeName": {
-              "id": 156,
+              "id": 165,
               "keyType": {
-                "id": 154,
+                "id": 163,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "1389:7:0",
+                "src": "1490:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "1381:37:0",
+              "src": "1482:37:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                 "typeString": "mapping(address => contract PersonalContracts)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 155,
+                "id": 164,
                 "name": "PersonalContracts",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 153,
-                "src": "1400:17:0",
+                "referencedDeclaration": 162,
+                "src": "1501:17:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                  "typeIdentifier": "t_contract$_PersonalContracts_$162",
                   "typeString": "contract PersonalContracts"
                 }
               }
@@ -5170,9 +5352,9 @@
           },
           {
             "body": {
-              "id": 169,
+              "id": 178,
               "nodeType": "Block",
-              "src": "1503:56:0",
+              "src": "1604:56:0",
               "statements": [
                 {
                   "expression": {
@@ -5182,34 +5364,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 163,
+                          "id": 172,
                           "name": "personalContracts",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 157,
-                          "src": "1524:17:0",
+                          "referencedDeclaration": 166,
+                          "src": "1625:17:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                             "typeString": "mapping(address => contract PersonalContracts)"
                           }
                         },
-                        "id": 166,
+                        "id": 175,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 164,
+                            "id": 173,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 306,
-                            "src": "1542:3:0",
+                            "referencedDeclaration": 315,
+                            "src": "1643:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 165,
+                          "id": 174,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5217,7 +5399,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1542:10:0",
+                          "src": "1643:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -5228,9 +5410,9 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1524:29:0",
+                        "src": "1625:29:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       }
@@ -5238,24 +5420,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       ],
-                      "id": 162,
+                      "id": 171,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "nodeType": "ElementaryTypeNameExpression",
-                      "src": "1516:7:0",
+                      "src": "1617:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_type$_t_address_$",
                         "typeString": "type(address)"
                       },
                       "typeName": "address"
                     },
-                    "id": 167,
+                    "id": 176,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5263,43 +5445,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1516:38:0",
+                    "src": "1617:38:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 161,
-                  "id": 168,
+                  "functionReturnParameters": 170,
+                  "id": 177,
                   "nodeType": "Return",
-                  "src": "1509:45:0"
+                  "src": "1610:45:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 170,
+            "id": 179,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 158,
+              "id": 167,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1470:2:0"
+              "src": "1571:2:0"
             },
             "returnParameters": {
-              "id": 161,
+              "id": 170,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 160,
+                  "id": 169,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 170,
-                  "src": "1494:7:0",
+                  "scope": 179,
+                  "src": "1595:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5307,10 +5489,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 159,
+                    "id": 168,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1494:7:0",
+                    "src": "1595:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5321,10 +5503,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1493:9:0"
+              "src": "1594:9:0"
             },
-            "scope": 254,
-            "src": "1441:118:0",
+            "scope": 263,
+            "src": "1542:118:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -5332,21 +5514,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 176,
+            "id": 185,
             "name": "PersonalContractsCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 175,
+              "id": 184,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 172,
+                  "id": 181,
                   "indexed": false,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 176,
-                  "src": "1594:13:0",
+                  "scope": 185,
+                  "src": "1695:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5354,10 +5536,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 171,
+                    "id": 180,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1594:7:0",
+                    "src": "1695:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5369,12 +5551,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 174,
+                  "id": 183,
                   "indexed": false,
                   "name": "location",
                   "nodeType": "VariableDeclaration",
-                  "scope": 176,
-                  "src": "1609:16:0",
+                  "scope": 185,
+                  "src": "1710:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5382,10 +5564,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 173,
+                    "id": 182,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1609:7:0",
+                    "src": "1710:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5396,43 +5578,43 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1593:33:0"
+              "src": "1694:33:0"
             },
-            "src": "1563:64:0"
+            "src": "1664:64:0"
           },
           {
             "body": {
-              "id": 200,
+              "id": 209,
               "nodeType": "Block",
-              "src": "1686:171:0",
+              "src": "1787:171:0",
               "statements": [
                 {
                   "assignments": [
-                    182
+                    191
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 182,
+                      "id": 191,
                       "name": "pContracts",
                       "nodeType": "VariableDeclaration",
-                      "scope": 200,
-                      "src": "1692:28:0",
+                      "scope": 209,
+                      "src": "1793:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 181,
+                        "id": 190,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "1692:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "1793:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
@@ -5440,37 +5622,37 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 186,
+                  "id": 195,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 184,
+                      "id": 193,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "NewExpression",
-                      "src": "1723:21:0",
+                      "src": "1824:21:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "function () returns (contract PersonalContracts)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 183,
+                        "id": 192,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "1727:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "1828:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       }
                     },
-                    "id": 185,
+                    "id": 194,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5478,19 +5660,19 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1723:23:0",
+                    "src": "1824:23:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1692:54:0"
+                  "src": "1793:54:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 191,
+                    "id": 200,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5499,26 +5681,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 187,
+                        "id": 196,
                         "name": "personalContracts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 157,
-                        "src": "1752:17:0",
+                        "referencedDeclaration": 166,
+                        "src": "1853:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                           "typeString": "mapping(address => contract PersonalContracts)"
                         }
                       },
-                      "id": 189,
+                      "id": 198,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 188,
+                        "id": 197,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 178,
-                        "src": "1770:5:0",
+                        "referencedDeclaration": 187,
+                        "src": "1871:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -5529,9 +5711,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "1752:24:0",
+                      "src": "1853:24:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       }
                     },
@@ -5539,26 +5721,26 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 190,
+                      "id": 199,
                       "name": "pContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 182,
-                      "src": "1779:10:0",
+                      "referencedDeclaration": 191,
+                      "src": "1880:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       }
                     },
-                    "src": "1752:37:0",
+                    "src": "1853:37:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
-                  "id": 192,
+                  "id": 201,
                   "nodeType": "ExpressionStatement",
-                  "src": "1752:37:0"
+                  "src": "1853:37:0"
                 },
                 {
                   "eventCall": {
@@ -5566,12 +5748,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 194,
+                        "id": 203,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 178,
-                        "src": "1825:5:0",
+                        "referencedDeclaration": 187,
+                        "src": "1926:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -5582,14 +5764,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 196,
+                            "id": 205,
                             "name": "pContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 182,
-                            "src": "1840:10:0",
+                            "referencedDeclaration": 191,
+                            "src": "1941:10:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                              "typeIdentifier": "t_contract$_PersonalContracts_$162",
                               "typeString": "contract PersonalContracts"
                             }
                           }
@@ -5597,24 +5779,24 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                              "typeIdentifier": "t_contract$_PersonalContracts_$162",
                               "typeString": "contract PersonalContracts"
                             }
                           ],
-                          "id": 195,
+                          "id": 204,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "1832:7:0",
+                          "src": "1933:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": "address"
                         },
-                        "id": 197,
+                        "id": 206,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -5622,7 +5804,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1832:19:0",
+                        "src": "1933:19:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -5640,18 +5822,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 193,
+                      "id": 202,
                       "name": "PersonalContractsCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 176,
-                      "src": "1800:24:0",
+                      "referencedDeclaration": 185,
+                      "src": "1901:24:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
                         "typeString": "function (address,address)"
                       }
                     },
-                    "id": 198,
+                    "id": 207,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5659,36 +5841,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1800:52:0",
+                    "src": "1901:52:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 199,
+                  "id": 208,
                   "nodeType": "EmitStatement",
-                  "src": "1795:57:0"
+                  "src": "1896:57:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 201,
+            "id": 210,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createPersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 179,
+              "id": 188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 178,
+                  "id": 187,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 201,
-                  "src": "1664:13:0",
+                  "scope": 210,
+                  "src": "1765:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5696,10 +5878,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 177,
+                    "id": 186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1664:7:0",
+                    "src": "1765:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5710,25 +5892,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1663:15:0"
+              "src": "1764:15:0"
             },
             "returnParameters": {
-              "id": 180,
+              "id": 189,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1686:0:0"
+              "src": "1787:0:0"
             },
-            "scope": 254,
-            "src": "1631:226:0",
+            "scope": 263,
+            "src": "1732:226:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 227,
+              "id": 236,
               "nodeType": "Block",
-              "src": "1950:146:0",
+              "src": "2051:146:0",
               "statements": [
                 {
                   "condition": {
@@ -5737,7 +5919,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 216,
+                    "id": 225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5749,26 +5931,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 209,
+                            "id": 218,
                             "name": "personalContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 157,
-                            "src": "1968:17:0",
+                            "referencedDeclaration": 166,
+                            "src": "2069:17:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                               "typeString": "mapping(address => contract PersonalContracts)"
                             }
                           },
-                          "id": 211,
+                          "id": 220,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 210,
+                            "id": 219,
                             "name": "owner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 203,
-                            "src": "1986:5:0",
+                            "referencedDeclaration": 212,
+                            "src": "2087:5:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -5779,9 +5961,9 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1968:24:0",
+                          "src": "2069:24:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                            "typeIdentifier": "t_contract$_PersonalContracts_$162",
                             "typeString": "contract PersonalContracts"
                           }
                         }
@@ -5789,24 +5971,24 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                            "typeIdentifier": "t_contract$_PersonalContracts_$162",
                             "typeString": "contract PersonalContracts"
                           }
                         ],
-                        "id": 208,
+                        "id": 217,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "1960:7:0",
+                        "src": "2061:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": "address"
                       },
-                      "id": 212,
+                      "id": 221,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5814,7 +5996,7 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "1960:33:0",
+                      "src": "2061:33:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5828,14 +6010,14 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 214,
+                          "id": 223,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "2005:1:0",
+                          "src": "2106:1:0",
                           "subdenomination": null,
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
@@ -5851,20 +6033,20 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 213,
+                        "id": 222,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "1997:7:0",
+                        "src": "2098:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": "address"
                       },
-                      "id": 215,
+                      "id": 224,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5872,26 +6054,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "1997:10:0",
+                      "src": "2098:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "1960:47:0",
+                    "src": "2061:47:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 222,
+                  "id": 231,
                   "nodeType": "IfStatement",
-                  "src": "1956:98:0",
+                  "src": "2057:98:0",
                   "trueBody": {
-                    "id": 221,
+                    "id": 230,
                     "nodeType": "Block",
-                    "src": "2009:45:0",
+                    "src": "2110:45:0",
                     "statements": [
                       {
                         "expression": {
@@ -5899,12 +6081,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 218,
+                              "id": 227,
                               "name": "owner",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 203,
-                              "src": "2041:5:0",
+                              "referencedDeclaration": 212,
+                              "src": "2142:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -5918,18 +6100,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 217,
+                            "id": 226,
                             "name": "createPersonalContracts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 201,
-                            "src": "2017:23:0",
+                            "referencedDeclaration": 210,
+                            "src": "2118:23:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 219,
+                          "id": 228,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5937,15 +6119,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "2017:30:0",
+                          "src": "2118:30:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 220,
+                        "id": 229,
                         "nodeType": "ExpressionStatement",
-                        "src": "2017:30:0"
+                        "src": "2118:30:0"
                       }
                     ]
                   }
@@ -5955,26 +6137,26 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 223,
+                      "id": 232,
                       "name": "personalContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 157,
-                      "src": "2067:17:0",
+                      "referencedDeclaration": 166,
+                      "src": "2168:17:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_mapping$_t_address_$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "mapping(address => contract PersonalContracts)"
                       }
                     },
-                    "id": 225,
+                    "id": 234,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 224,
+                      "id": 233,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 203,
-                      "src": "2085:5:0",
+                      "referencedDeclaration": 212,
+                      "src": "2186:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5985,37 +6167,37 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "2067:24:0",
+                    "src": "2168:24:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
-                  "functionReturnParameters": 207,
-                  "id": 226,
+                  "functionReturnParameters": 216,
+                  "id": 235,
                   "nodeType": "Return",
-                  "src": "2060:31:0"
+                  "src": "2161:31:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 228,
+            "id": 237,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getOrCreatePersonalContracts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 204,
+              "id": 213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 203,
+                  "id": 212,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 228,
-                  "src": "1899:13:0",
+                  "scope": 237,
+                  "src": "2000:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6023,10 +6205,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 202,
+                    "id": 211,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1899:7:0",
+                    "src": "2000:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6037,34 +6219,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1898:15:0"
+              "src": "1999:15:0"
             },
             "returnParameters": {
-              "id": 207,
+              "id": 216,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 206,
+                  "id": 215,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 228,
-                  "src": "1931:17:0",
+                  "scope": 237,
+                  "src": "2032:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                    "typeIdentifier": "t_contract$_PersonalContracts_$162",
                     "typeString": "contract PersonalContracts"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 205,
+                    "id": 214,
                     "name": "PersonalContracts",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 153,
-                    "src": "1931:17:0",
+                    "referencedDeclaration": 162,
+                    "src": "2032:17:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
@@ -6072,32 +6254,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1930:19:0"
+              "src": "2031:19:0"
             },
-            "scope": 254,
-            "src": "1861:235:0",
+            "scope": 263,
+            "src": "1962:235:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "private"
           },
           {
             "body": {
-              "id": 252,
+              "id": 261,
               "nodeType": "Block",
-              "src": "2134:263:0",
+              "src": "2235:263:0",
               "statements": [
                 {
                   "assignments": [
-                    232
+                    241
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 232,
+                      "id": 241,
                       "name": "newContract",
                       "nodeType": "VariableDeclaration",
-                      "scope": 252,
-                      "src": "2140:25:0",
+                      "scope": 261,
+                      "src": "2241:25:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -6106,11 +6288,11 @@
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 231,
+                        "id": 240,
                         "name": "BasicContract",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 112,
-                        "src": "2140:13:0",
+                        "src": "2241:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
@@ -6120,7 +6302,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 238,
+                  "id": 247,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -6128,18 +6310,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 235,
+                          "id": 244,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
-                          "src": "2186:3:0",
+                          "referencedDeclaration": 315,
+                          "src": "2287:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 236,
+                        "id": 245,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -6147,7 +6329,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "2186:10:0",
+                        "src": "2287:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -6161,31 +6343,31 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 234,
+                      "id": 243,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "NewExpression",
-                      "src": "2168:17:0",
+                      "src": "2269:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_BasicContract_$112_$",
                         "typeString": "function (address) returns (contract BasicContract)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 233,
+                        "id": 242,
                         "name": "BasicContract",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 112,
-                        "src": "2172:13:0",
+                        "src": "2273:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
                         }
                       }
                     },
-                    "id": 237,
+                    "id": 246,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6193,42 +6375,42 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2168:29:0",
+                    "src": "2269:29:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_BasicContract_$112",
                       "typeString": "contract BasicContract"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2140:57:0"
+                  "src": "2241:57:0"
                 },
                 {
                   "assignments": [
-                    240
+                    249
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 240,
+                      "id": 249,
                       "name": "pContracts",
                       "nodeType": "VariableDeclaration",
-                      "scope": 252,
-                      "src": "2280:28:0",
+                      "scope": 261,
+                      "src": "2381:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                        "typeIdentifier": "t_contract$_PersonalContracts_$162",
                         "typeString": "contract PersonalContracts"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 239,
+                        "id": 248,
                         "name": "PersonalContracts",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 153,
-                        "src": "2280:17:0",
+                        "referencedDeclaration": 162,
+                        "src": "2381:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
@@ -6236,7 +6418,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 245,
+                  "id": 254,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -6244,18 +6426,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 242,
+                          "id": 251,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 306,
-                          "src": "2340:3:0",
+                          "referencedDeclaration": 315,
+                          "src": "2441:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 243,
+                        "id": 252,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -6263,7 +6445,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "2340:10:0",
+                        "src": "2441:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -6277,18 +6459,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 241,
+                      "id": 250,
                       "name": "getOrCreatePersonalContracts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
-                      "src": "2311:28:0",
+                      "referencedDeclaration": 237,
+                      "src": "2412:28:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_PersonalContracts_$153_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_PersonalContracts_$162_$",
                         "typeString": "function (address) returns (contract PersonalContracts)"
                       }
                     },
-                    "id": 244,
+                    "id": 253,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6296,14 +6478,14 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2311:40:0",
+                    "src": "2412:40:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                      "typeIdentifier": "t_contract$_PersonalContracts_$162",
                       "typeString": "contract PersonalContracts"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2280:71:0"
+                  "src": "2381:71:0"
                 },
                 {
                   "expression": {
@@ -6311,12 +6493,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 249,
+                        "id": 258,
                         "name": "newContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 232,
-                        "src": "2380:11:0",
+                        "referencedDeclaration": 241,
+                        "src": "2481:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_BasicContract_$112",
                           "typeString": "contract BasicContract"
@@ -6332,18 +6514,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 246,
+                        "id": 255,
                         "name": "pContracts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
-                        "src": "2357:10:0",
+                        "referencedDeclaration": 249,
+                        "src": "2458:10:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PersonalContracts_$153",
+                          "typeIdentifier": "t_contract$_PersonalContracts_$162",
                           "typeString": "contract PersonalContracts"
                         }
                       },
-                      "id": 248,
+                      "id": 257,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -6351,13 +6533,13 @@
                       "memberName": "addContract",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 143,
-                      "src": "2357:22:0",
+                      "src": "2458:22:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_contract$_BasicContract_$112_$returns$__$",
                         "typeString": "function (contract BasicContract) external"
                       }
                     },
-                    "id": 250,
+                    "id": 259,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6365,49 +6547,49 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2357:35:0",
+                    "src": "2458:35:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 251,
+                  "id": 260,
                   "nodeType": "ExpressionStatement",
-                  "src": "2357:35:0"
+                  "src": "2458:35:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 253,
+            "id": 262,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 229,
+              "id": 238,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2124:2:0"
+              "src": "2225:2:0"
             },
             "returnParameters": {
-              "id": 230,
+              "id": 239,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2134:0:0"
+              "src": "2235:0:0"
             },
-            "scope": 254,
-            "src": "2101:296:0",
+            "scope": 263,
+            "src": "2202:296:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 255,
-        "src": "1352:1047:0"
+        "scope": 264,
+        "src": "1453:1047:0"
       }
     ],
-    "src": "0:2399:0"
+    "src": "0:2500:0"
   },
   "compiler": {
     "name": "solc",
@@ -6415,7 +6597,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-05-24T08:53:00.524Z",
+  "updatedAt": "2020-05-24T09:47:58.296Z",
   "devdoc": {
     "methods": {}
   },

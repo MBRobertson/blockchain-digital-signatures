@@ -52,6 +52,10 @@ contract PersonalContracts {
     emit ContractAssigned(msg.sender, address(c));
   }
 
+  function getContracts() public view returns(BasicContract[] memory) {
+      return contracts;
+  }
+
   constructor() public {
     owner = msg.sender;
   }
