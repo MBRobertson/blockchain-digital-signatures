@@ -79,6 +79,7 @@ class ContractContainer {
     this.titleCache = undefined;
     this.contentCache = undefined;
     this.hashCache = undefined;
+    this.signedCache = undefined;
 
     this.getContent = this.getContent.bind(this);
     this.sign = this.sign.bind(this);
@@ -103,6 +104,7 @@ class ContractContainer {
     this.titleCache = undefined;
     this.contentCache = undefined;
     this.hashCache = undefined;
+    this.signedCache = undefined;
   }
 
   async sign() {
@@ -119,11 +121,12 @@ class ContractContainer {
   }
 
   async checkSigned(signee) {
+    let doCache = false;
     if (!signee) {
+      if (this.signedCache) return this.signedCache;
+      doCache = true;
       signee = (await accounts)[0]
     }
-
-    this.invalidate();
 
     const sig = await this.instance.methods.getSignature(signee).call();
 
@@ -134,7 +137,11 @@ class ContractContainer {
 
     const verifySignee = await w3.eth.personal.ecRecover(hash, sig)
 
-    return verifySignee.toLowerCase() === signee.toLowerCase() ? 1 : -1
+    const result = verifySignee.toLowerCase() === signee.toLowerCase() ? 1 : -1;
+    
+    if (doCache) this.signedCache = result;
+
+    return result;
   }
 }
 

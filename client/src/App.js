@@ -4,13 +4,14 @@ import { Spin, Divider, Typography, Button } from 'antd';
 import { LoadingOutlined, FileAddOutlined, PlusCircleOutlined } from '@ant-design/icons';
 
 import { ContractListItem } from './components/ContractListItem';
+import { ContractView } from './components/ContractView';
 
 import "./App.css";
 
 const spinIcon = <LoadingOutlined style={{ fontSize: 60, color: "white" }} spin />;
 
 class App extends Component {
-  state = { hasPersonalContracts: undefined, pc: undefined, contracts: [], processing: false };
+  state = { hasPersonalContracts: undefined, pc: undefined, contracts: [], processing: false, selectedContract: null };
 
   constructor(props) {
     super(props);
@@ -52,6 +53,10 @@ class App extends Component {
     if (this.state.hasPersonalContracts === undefined) {
       return <div className="App-loading"><Spin indicator={spinIcon} /></div>;
     }
+
+    if (this.state.selectedContract)
+      return <ContractView contract={this.state.selectedContract} exit={() => this.setState({selectedContract: null})}/>
+
     return (
       <div className="App-container">
         <div className="App Card">
@@ -66,7 +71,11 @@ class App extends Component {
                     {this.state.contracts.length === 0 ? <p style={{ marginBottom: 30 }}>
                       <Typography.Text>You are currently not a participant to any contracts</Typography.Text>
                     </p> : null }
-                    {this.state.contracts.map(contract => <ContractListItem contract={contract} key={contract.address} />)}
+                    {this.state.contracts.map(contract => <ContractListItem 
+                      contract={contract} 
+                      key={contract.address} 
+                      onContractSelect={(contract) => this.setState({ selectedContract: contract })}
+                    />)}
                   </div>
                 </div>
                 <div style={{ textAlign: "right", marginTop: 15 }}>
