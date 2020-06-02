@@ -76,20 +76,33 @@ class ContractContainer {
     this.address = address;
     this.instance = instance;
 
+    this.titleCache = undefined;
+    this.contentCache = undefined;
+    this.hashCache = undefined;
+
     this.getContent = this.getContent.bind(this);
     this.sign = this.sign.bind(this);
   }
 
   async getTitle() {
-    return await this.instance.methods.getTitle().call()
+    if (!this.titleCache) this.titleCache = await this.instance.methods.getTitle().call();
+    return this.titleCache;
   }
 
   async getContent() {
-    return await this.instance.methods.getContent().call()
+    if (!this.contentCache) this.contentCache = await this.instance.methods.getContent().call()
+    return this.contentCache;
   }
 
   async getHash() {
-    return await this.instance.methods.getHash().call()
+    if (!this.hashCache) this.hashCache = await this.instance.methods.getHash().call()
+    return this.hashCache;
+  }
+
+  invalidate() {
+    this.titleCache = undefined;
+    this.contentCache = undefined;
+    this.hashCache = undefined;
   }
 
   async sign() {
@@ -101,6 +114,7 @@ class ContractContainer {
 
     await this.instance.methods.sign(sig).send({ from: account, gas: 1000000 })
     
+    this.invalidate();
     console.log("Sent!")
   }
 
@@ -108,6 +122,8 @@ class ContractContainer {
     if (!signee) {
       signee = (await accounts)[0]
     }
+
+    this.invalidate();
 
     const sig = await this.instance.methods.getSignature(signee).call();
 
