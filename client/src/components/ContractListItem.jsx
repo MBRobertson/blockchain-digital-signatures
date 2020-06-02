@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from 'antd';
 import './ContractListItem.css';
 
-export const ContractListItem = ({ contract }) => {
+export const ContractListItem = ({ contract, onContractSelect }) => {
     const [title, setTitle] = useState("Fetching Info...")
     const [signed, setSigned] = useState(-2)
   
@@ -19,10 +19,10 @@ export const ContractListItem = ({ contract }) => {
         <div className="address">{contract.address}</div>
       </div>
       <div className="column right">
-        <div className="status">{(() => {
+        <div className={`status status-${signed}`}>{(() => {
           switch(signed) {
             case -2:
-              return "Checking..."
+              return "Checking"
             case -1:
               return "Signed (Invalid)"
             case 0:
@@ -30,12 +30,11 @@ export const ContractListItem = ({ contract }) => {
             case 1:
               return "Signed (Validated)"
             default:
-              return "Unexpected Signature"
+              return "Unexpected Result"
         }})()}</div>
-        <Button shape="round" size="small" onClick={async () => {
-          await contract.sign()
-          setSigned(await contract.checkSigned());
-        }}>Sign</Button>
+        <Button shape="round" size="small" onClick={() => {
+          if (onContractSelect) onContractSelect(contract);
+        }}>View</Button>
       </div>
     </div>
   }

@@ -31,3 +31,21 @@
 .ContractListItem .address {
     font-size: 12px;
 }
+
+.ContractListItem .status {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ContractListItem .status--1 {
+    color: #ad0a0a;
+}
+
+.ContractListItem .status-0 {
+    color: #5e5e5e;
+}
+
+.ContractListItem .status-1 {
+    color: #0c8c00;
+}
