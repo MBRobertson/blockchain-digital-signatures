@@ -1,4 +1,4 @@
-// import BasicContract from "./contracts/BasicContract.json";
+import BasicContract from "./contracts/BasicContract.json";
 import ContractManager from "./contracts/ContractManager.json";
 import PersonalContracts from "./contracts/PersonalContracts.json";
 
@@ -71,6 +71,57 @@ export const createOrGetPersonalContracts = async () => {
 
 }
 
+class ContractContainer {
+  constructor(address, instance) {
+    this.address = address;
+    this.instance = instance;
+
+    this.getContent = this.getContent.bind(this);
+    this.sign = this.sign.bind(this);
+  }
+
+  async getTitle() {
+    return await this.instance.methods.getTitle().call()
+  }
+
+  async getContent() {
+    return await this.instance.methods.getContent().call()
+  }
+
+  async getHash() {
+    return await this.instance.methods.getHash().call()
+  }
+
+  async sign() {
+    const account = (await accounts)[0]
+    const w3 = await web3;
+    const hash = await this.getHash()
+
+    const sig = await w3.eth.personal.sign(hash, account);
+
+    await this.instance.methods.sign(sig).send({ from: account, gas: 1000000 })
+    
+    console.log("Sent!")
+  }
+
+  async checkSigned(signee) {
+    if (!signee) {
+      signee = (await accounts)[0]
+    }
+
+    const sig = await this.instance.methods.getSignature(signee).call();
+
+    if (sig.length === 0) return 0;
+
+    const w3 = await web3;
+    const hash = await this.getHash();
+
+    const verifySignee = await w3.eth.personal.ecRecover(hash, sig)
+
+    return verifySignee.toLowerCase() === signee.toLowerCase() ? 1 : -1
+  }
+}
+
 class PersonalContractsContainer {
   constructor(instance) {
     this.instance = instance;
@@ -79,7 +130,7 @@ class PersonalContractsContainer {
     instance.events.ContractAssigned((err, result) => {
       // const assigner = result.returnValues[0];
       const newContractAddress = result.returnValues[1];
-      
+
       if (this.callbacks.length > 0) {
         this.callbacks.shift()(newContractAddress);
       }
@@ -90,7 +141,15 @@ class PersonalContractsContainer {
   }
 
   async getContracts() {
-    return await this.instance.methods.getContracts().call();
+    const w3 = await web3;
+    return (await this.instance.methods.getContracts().call()).map(cAddress => {
+      const instance = new w3.eth.Contract(
+        BasicContract.abi,
+        cAddress
+      );
+      return new ContractContainer(cAddress, instance)
+    }
+    );
   }
 
   async createNewContract() {
@@ -101,7 +160,7 @@ class PersonalContractsContainer {
       this.callbacks.push((address) => resolve(address))
     })
 
-    await managerInstance.methods.createContract().send({ from: account, gas: 1000000 })
+    await managerInstance.methods.createContract("Sample Contract").send({ from: account, gas: 1000000 })
 
     return await newAddress;
   }

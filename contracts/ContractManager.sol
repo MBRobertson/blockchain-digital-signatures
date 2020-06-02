@@ -6,10 +6,12 @@ contract BasicContract {
   mapping(address => bool) permissions;
   string content;
   mapping(address => string) signatures;
+  string title;
 
-  constructor(address creator) public {
+  constructor(address creator, string memory t) public {
     owner = creator;
     content = "Hello";
+    title = t;
     permissions[owner] = true;
     participants.push(owner);
   }
@@ -31,8 +33,16 @@ contract BasicContract {
     }
   }
 
+  function getSignature(address signee) public view returns (string memory) {
+    return signatures[signee];
+  }
+
   function getContent() public view returns (string memory) {
     return content;
+  }
+
+  function getTitle() public view returns (string memory) {
+    return title;
   }
 
   function getHash() public view returns (bytes32) {
@@ -85,8 +95,8 @@ contract ContractManager {
   }
 
 
-  function createContract() public {
-    BasicContract newContract = new BasicContract(msg.sender);
+  function createContract(string memory title) public {
+    BasicContract newContract = new BasicContract(msg.sender, title);
 
     // Automatically assign the contract to the creators personal contracts
     PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);
