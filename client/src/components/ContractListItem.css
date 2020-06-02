@@ -1,0 +1,33 @@
+.ContractListItem {
+    min-width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.ContractListItem:last-of-type {
+    border-bottom: none;
+}
+
+
+.ContractListItem .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ContractListItem .left {
+    flex-grow: 1;
+}
+
+.ContractListItem .title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ContractListItem .address {
+    font-size: 12px;
+}

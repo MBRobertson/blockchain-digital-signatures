@@ -1,49 +1,13 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import { hasPersonalContracts, createOrGetPersonalContracts } from './ContractManager';
 import { Spin, Divider, Typography, Button } from 'antd';
 import { LoadingOutlined, FileAddOutlined, PlusCircleOutlined } from '@ant-design/icons';
 
+import { ContractListItem } from './components/ContractListItem';
+
 import "./App.css";
 
 const spinIcon = <LoadingOutlined style={{ fontSize: 60, color: "white" }} spin />;
-
-const ContractDisplay = ({ contract }) => {
-  const [title, setTitle] = useState("Fetching Info...")
-  const [signed, setSigned] = useState(-2)
-
-  useEffect(() => {
-    (async () => {
-      setTitle(await contract.getTitle());
-      setSigned(await contract.checkSigned());
-    })();
-  }, [contract])
-
-  return <div className="ContractDisplay">
-    <div className="column left">
-      <div>{title}</div>
-      <div>{contract.address}</div>
-    </div>
-    <div className="column right">
-      <div>{(() => {
-        switch(signed) {
-          case -2:
-            return "Checking..."
-          case -1:
-            return "Signed (Invalid)"
-          case 0:
-            return "Not Signed"
-          case 1:
-            return "Signed (Validated)"
-          default:
-            return "Unexpected Signature"
-      }})()}</div>
-      <Button shape="round" size="small" onClick={async () => {
-        await contract.sign()
-        setSigned(await contract.checkSigned());
-      }}>Sign</Button>
-    </div>
-  </div>
-}
 
 class App extends Component {
   state = { hasPersonalContracts: undefined, pc: undefined, contracts: [], processing: false };
@@ -102,7 +66,7 @@ class App extends Component {
                     {this.state.contracts.length === 0 ? <p style={{ marginBottom: 30 }}>
                       <Typography.Text>You are currently not a participant to any contracts</Typography.Text>
                     </p> : null }
-                    {this.state.contracts.map(contract => <ContractDisplay contract={contract} key={contract.address} />)}
+                    {this.state.contracts.map(contract => <ContractListItem contract={contract} key={contract.address} />)}
                   </div>
                 </div>
                 <div style={{ textAlign: "right", marginTop: 15 }}>
