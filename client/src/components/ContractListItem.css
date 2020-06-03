@@ -23,6 +23,10 @@
     flex-grow: 1;
 }
 
+.ContractListItem .right {
+    align-items: flex-end;
+}
+
 .ContractListItem .title {
     font-weight: 600;
     font-size: 16px;
@@ -32,20 +36,20 @@
     font-size: 12px;
 }
 
-.ContractListItem .status {
+.Contract-Status {
     font-size: 13px;
     font-weight: 800;
     text-transform: uppercase;
 }
 
-.ContractListItem .status--1 {
+.Contract-Status.status--1 {
     color: #ad0a0a;
 }
 
-.ContractListItem .status-0 {
+.Contract-Status.status-0 {
     color: #5e5e5e;
 }
 
-.ContractListItem .status-1 {
+.Contract-Status.status-1 {
     color: #0c8c00;
 }
