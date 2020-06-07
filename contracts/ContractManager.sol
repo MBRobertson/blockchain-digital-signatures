@@ -1,6 +1,7 @@
 pragma solidity >=0.4.21 <0.7.0;
 
 contract BasicContract {
+  ContractManager manager;
   address owner;
   address[] participants;
   mapping(address => bool) permissions;
@@ -8,7 +9,8 @@ contract BasicContract {
   mapping(address => string) signatures;
   string title;
 
-  constructor(address creator, string memory t) public {
+  constructor(address creator, string memory t, ContractManager caller) public {
+    manager = caller;
     owner = creator;
     content = "Hello";
     title = t;
@@ -21,6 +23,7 @@ contract BasicContract {
     if (msg.sender == owner && !permissions[participant]) {
       permissions[participant] = true;
       participants.push(participant);
+      manager.addParticipant(participant, this);
     }
   }
 
@@ -35,6 +38,10 @@ contract BasicContract {
 
   function getSignature(address signee) public view returns (string memory) {
     return signatures[signee];
+  }
+
+  function getParticipants() public view returns (address[] memory) {
+    return participants;
   }
 
   function getContent() public view returns (string memory) {
@@ -95,8 +102,15 @@ contract ContractManager {
   }
 
 
+  function addParticipant(address newParticipant, BasicContract contractAddress) public {
+    // TODO: Ensure permission to do this?
+    PersonalContracts pContract = getOrCreatePersonalContracts(newParticipant);
+    pContract.addContract(contractAddress);
+  }
+
+
   function createContract(string memory title) public {
-    BasicContract newContract = new BasicContract(msg.sender, title);
+    BasicContract newContract = new BasicContract(msg.sender, title, this);
 
     // Automatically assign the contract to the creators personal contracts
     PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);
