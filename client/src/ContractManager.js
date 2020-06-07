@@ -89,9 +89,15 @@ class ContractContainer {
     this.contentCache = undefined;
     this.hashCache = undefined;
     this.signedCache = undefined;
+    this.participantCache = undefined;
 
     this.getContent = this.getContent.bind(this);
     this.sign = this.sign.bind(this);
+  }
+
+  async getParticipants() {
+    if (!this.participantCache) this.participantCache = await this.instance.methods.getParticipants().call();
+    return this.participantCache;
   }
 
   async getTitle() {
@@ -114,6 +120,20 @@ class ContractContainer {
     this.contentCache = undefined;
     this.hashCache = undefined;
     this.signedCache = undefined;
+    this.participantCache = undefined;
+  }
+
+  async addParticipant(address) {
+    const curParticipants = await this.getParticipants();
+    // Check that they aren't already a participant
+    if (curParticipants.indexOf(address) === -1) {
+      const account = (await accounts)[0]
+
+      await this.instance.methods.addParticipant(address).send({ from: account, gas: 1000000 });
+
+      // TODO: Better method of refreshing data
+      this.invalidate();
+    }
   }
 
   async sign() {
