@@ -71,6 +71,15 @@ export const createOrGetPersonalContracts = async () => {
 
 }
 
+export const getContacts = async () => {
+  return [
+    {
+      "name": "John Doe",
+      "address": "0xa5d844e32288304184efdd8ed45896b4d7ca853a"
+    }
+  ]
+}
+
 class ContractContainer {
   constructor(address, instance) {
     this.address = address;
