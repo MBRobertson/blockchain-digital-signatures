@@ -18,20 +18,20 @@ export const getContacts = () => {
 
 export const addContact = (address, data) => {
     let contacts = getContacts();
-    delete contacts[address];
+    delete contacts[address.toLowerCase()];
     window.localStorage.setItem("contacts", JSON.stringify(contacts))
 }
 
 export const deleteContact = (address) => {
     let contacts = getContacts();
-    delete contacts[address];
+    delete contacts[address.toLowerCase()];
     window.localStorage.setItem("contacts", JSON.stringify(contacts))
 }
 
 export const addressToName = (address) => {
     let contacts = getContacts()
-    if (contacts[address] && contacts[address].name) {
-        return contacts[address].name
+    if (contacts[address.toLowerCase()] && contacts[address.toLowerCase()].name) {
+        return contacts[address.toLowerCase()].name
     } else {
         return address
     }
