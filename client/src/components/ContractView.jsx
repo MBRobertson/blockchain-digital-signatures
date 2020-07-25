@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Typography, Divider, Button } from 'antd';
 import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
+import * as Contacts from '../data/ContactStore';
 
 
 export const ContractView = ({ contract, exit }) => {
@@ -39,7 +40,7 @@ export const ContractView = ({ contract, exit }) => {
                     <Divider plain>Content</Divider>
                     <Typography.Text>{content}</Typography.Text>
                     <Divider plain>Participants</Divider>
-                    <Typography.Text>{JSON.stringify(participants)}</Typography.Text>
+                    <Typography.Text>{JSON.stringify(participants.map(Contacts.addressToName))}</Typography.Text>
                     <div style={{ textAlign: "right", marginTop: 15 }}>
                         <Button loading={addingParticipant} icon={<PlusCircleOutlined />} shape="round" type="secondary" onClick={() => {
                             addParticipant("0xa5d844e32288304184efdd8ed45896b4d7ca853a");

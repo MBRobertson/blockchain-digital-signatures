@@ -1,0 +1,23 @@
+.ContactEditor {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+}
+
+.ContactEditor .Contacts {
+    text-align: center;
+    padding: 0;
+    min-width: 240px;
+    max-width: calc(100% - 60px);
+    margin-bottom: 13px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.13s ease-out, transform 0.13s ease-out;
+}
+
+.ContactEditor .Contacts.hidden {
+    pointer-events: none;
+    transform: translateY(4px);
+    opacity: 0;
+}

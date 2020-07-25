@@ -6,6 +6,8 @@ import { LoadingOutlined, FileAddOutlined, PlusCircleOutlined } from '@ant-desig
 import { ContractListItem } from './components/ContractListItem';
 import { ContractView } from './components/ContractView';
 
+import { ContactEditor } from './components/ContactEditor';
+
 import "./App.css";
 
 const spinIcon = <LoadingOutlined style={{ fontSize: 60, color: "white" }} spin />;
@@ -100,6 +102,7 @@ class App extends Component {
               </div>
           }
         </div>
+        <ContactEditor/>
       </div>
     );
   }
