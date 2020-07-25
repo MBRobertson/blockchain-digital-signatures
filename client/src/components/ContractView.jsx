@@ -4,9 +4,9 @@ import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
 
-
 export const ContractView = ({ contract, exit }) => {
     const [title, setTitle] = useState("Fetching Info...")
+    // const [owner, setOwner] = useState("Fetching Info...")
     const [content, setContent] = useState("Fetching Info...")
     const [signed, setSigned] = useState(-2)
     const [participants, setParticipants] = useState([]);
@@ -17,6 +17,7 @@ export const ContractView = ({ contract, exit }) => {
         (async () => setContent(await contract.getContent()))();
         (async () => setSigned(await contract.checkSigned()))();
         (async () => setParticipants(await contract.getParticipants()))();
+        // (async () => setOwner(Contacts.addressToName(await contract.getOwner())))();
     }, [contract]);
 
     const addParticipant = useCallback(async (address) => {

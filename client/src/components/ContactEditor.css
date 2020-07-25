@@ -7,7 +7,7 @@
 
 .ContactEditor .Contacts {
     text-align: center;
-    padding: 0;
+    padding: 3px 5px;
     min-width: 240px;
     max-width: calc(100% - 60px);
     margin-bottom: 13px;
@@ -16,8 +16,34 @@
     transition: opacity 0.13s ease-out, transform 0.13s ease-out;
 }
 
+.ContactEditor .Contacts .title {
+    margin: 3px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
 .ContactEditor .Contacts.hidden {
     pointer-events: none;
     transform: translateY(4px);
     opacity: 0;
+}
+
+.ContactView {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.ContactView .pic {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
 }

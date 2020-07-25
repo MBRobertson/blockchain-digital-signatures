@@ -44,6 +44,10 @@ contract BasicContract {
     return participants;
   }
 
+  function getOwner() public view returns (address) {
+    return owner;
+  }
+
   function getContent() public view returns (string memory) {
     return content;
   }

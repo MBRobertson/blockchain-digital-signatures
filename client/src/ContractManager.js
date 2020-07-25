@@ -89,6 +89,7 @@ class ContractContainer {
     this.address = address;
     this.instance = instance;
 
+    this.ownerCache = undefined;
     this.titleCache = undefined;
     this.contentCache = undefined;
     this.hashCache = undefined;
@@ -107,6 +108,11 @@ class ContractContainer {
   async getTitle() {
     if (!this.titleCache) this.titleCache = await this.instance.methods.getTitle().call();
     return this.titleCache;
+  }
+
+  async getOwner() {
+    if (!this.ownerCache) this.ownerCache = await this.instance.methods.getOwner().call();
+    return this.ownerCache;
   }
 
   async getContent() {
