@@ -1,3 +1,5 @@
+import { accounts } from '../ContractManager';
+
 const DEFUALT_CONTACTS = {
     "0x0bbd91c075433599094fb973e55235d239d22f8b": {
         name: "John Doe"
@@ -29,10 +31,14 @@ export const deleteContact = (address) => {
 }
 
 export const addressToName = (address) => {
+    let name = address
     let contacts = getContacts()
     if (contacts[address.toLowerCase()] && contacts[address.toLowerCase()].name) {
-        return contacts[address.toLowerCase()].name
-    } else {
-        return address
+        name = contacts[address.toLowerCase()].name
     }
+
+    if (address.toLowerCase() == localStorage.getItem("primaryAccount").toString().toLowerCase())
+        name = `${name} (Me)`
+    
+    return name
 }

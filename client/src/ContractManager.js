@@ -7,7 +7,11 @@ import getWeb3 from "./getWeb3";
 
 export const web3 = getWeb3();
 
-export const accounts = (async () => (await web3).eth.getAccounts())();
+export const accounts = (async () => {
+  let accounts = (await web3).eth.getAccounts()
+  localStorage.setItem("primaryAccount", (await accounts)[0])
+  return accounts
+})();
 
 let triggerFunction = (_) => undefined;
 export const manager = (async () => {
