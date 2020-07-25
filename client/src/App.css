@@ -2,6 +2,10 @@ html, body {
   background-color: #0f6ea8;
 }
 
+*, div {
+  box-sizing: border-box;
+}
+
 #root {
   width: 100%;
   height: 100%;

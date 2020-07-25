@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Button } from 'antd';
-import { UserSwitchOutlined, UserOutlined } from '@ant-design/icons'
+import { UserSwitchOutlined, UserOutlined, DeleteOutlined, EditOutlined } from '@ant-design/icons'
 
 import * as Contacts from '../data/ContactStore';
 
@@ -18,7 +18,7 @@ export const ContactEditor = () => {
         <div className={`Contacts Card ${hidden ? 'hidden' : ''}`}>
             <div className="title">Contacts</div>
             <div className="list">
-                {Object.entries(Contacts.getContacts()).map(([address, contact]) => <ContactView key={address} contact={contact}/>)}
+                {Object.entries(Contacts.getContacts()).map(([address, contact]) => <ContactView key={address} address={address} contact={contact}/>)}
             </div>
         </div>
         <div className="ButtonContainer">
@@ -27,9 +27,16 @@ export const ContactEditor = () => {
     </div>
 }
 
-export const ContactView = ({ contact }) => {
+export const ContactView = ({ address, contact }) => {
     return <div className="ContactView">
         <div className="pic"><UserOutlined/></div>
-        {contact.name}
+        <div className="details">
+            <div className="name">{contact.name}</div>
+            <div className="address">{address}</div>
+        </div>
+        <div className="actions">
+            <Button size="small" shape="round" icon={<EditOutlined/>}></Button>
+            <Button size="small" type="primary" shape="round" danger icon={<DeleteOutlined/>}></Button>
+        </div>
     </div>
 }

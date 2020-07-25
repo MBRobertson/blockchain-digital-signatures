@@ -4,6 +4,8 @@ import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
 
+import { ContactEditor } from './ContactEditor';
+
 export const ContractView = ({ contract, exit }) => {
     const [title, setTitle] = useState("Fetching Info...")
     // const [owner, setOwner] = useState("Fetching Info...")
@@ -56,5 +58,6 @@ export const ContractView = ({ contract, exit }) => {
                 </div>
             </div>
         </div>
+        <ContactEditor/>
     </div>
 }

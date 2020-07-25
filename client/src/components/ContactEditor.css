@@ -3,13 +3,17 @@
     bottom: 30px;
     right: 30px;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .ContactEditor .Contacts {
     text-align: center;
     padding: 3px 5px;
-    min-width: 240px;
-    max-width: calc(100% - 60px);
+    /* min-width: 240px; */
+    /* max-width: calc(100% - 60px); */
+    width: 250px;
     margin-bottom: 13px;
     opacity: 1;
     transform: translateY(0);
@@ -18,8 +22,12 @@
 
 .ContactEditor .Contacts .title {
     margin: 3px;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.ContactEditor .Contacts .list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.17);
 }
 
@@ -37,6 +45,7 @@
 }
 
 .ContactView .pic {
+    flex-shrink: 0;
     width: 35px;
     height: 35px;
     font-size: 18px;
@@ -46,4 +55,49 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 1);
+}
+
+.ContactView .details {
+    padding: 0 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 1;
+}
+
+.ContactView .details .address {
+    width: 100%;
+    font-size: 9px;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+
+.ContactView .details .name {
+    font-weight: bold;
+    margin-bottom: -4px;
+}
+
+.ContactView .actions .ant-btn {
+    padding: 0 4px;
+    margin-right: 4px;
+}
+
+.ContactView .actions .anticon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactView .actions {
+    display: none;
+}
+
+.ContactView:hover .actions {
+    display: block;
 }
