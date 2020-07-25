@@ -75,15 +75,6 @@ export const createOrGetPersonalContracts = async () => {
 
 }
 
-export const getContacts = async () => {
-  return [
-    {
-      "name": "John Doe",
-      "address": "0xa5d844e32288304184efdd8ed45896b4d7ca853a"
-    }
-  ]
-}
-
 class ContractContainer {
   constructor(address, instance) {
     this.address = address;
@@ -222,7 +213,7 @@ class PersonalContractsContainer {
       this.callbacks.push((address) => resolve(address))
     })
 
-    await managerInstance.methods.createContract("Sample Contract").send({ from: account, gas: 1000000 })
+    await managerInstance.methods.createContract("Sample Contract", "Hash Value").send({ from: account, gas: 1000000 })
 
     return await newAddress;
   }

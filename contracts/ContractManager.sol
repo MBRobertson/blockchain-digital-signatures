@@ -36,6 +36,10 @@ contract BasicContract {
     }
   }
 
+  function setContent(string memory newContent) public {
+    content = newContent;
+  }
+
   function getSignature(address signee) public view returns (string memory) {
     return signatures[signee];
   }
@@ -113,8 +117,9 @@ contract ContractManager {
   }
 
 
-  function createContract(string memory title) public {
+  function createContract(string memory title, string memory content) public {
     BasicContract newContract = new BasicContract(msg.sender, title, this);
+    newContract.setContent(content);
 
     // Automatically assign the contract to the creators personal contracts
     PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);
