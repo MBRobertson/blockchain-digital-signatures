@@ -10,10 +10,10 @@
 
 .ContactEditor .Contacts {
     text-align: center;
-    padding: 3px 5px;
+    padding: 7px 10px;
     /* min-width: 240px; */
     /* max-width: calc(100% - 60px); */
-    width: 250px;
+    width: 270px;
     margin-bottom: 13px;
     opacity: 1;
     transform: translateY(0);
@@ -29,6 +29,11 @@
 
 .ContactEditor .Contacts .list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.ContactEditor .Contacts .actions {
+    text-align: right;
+    padding: 5px 3px 3px;
 }
 
 .ContactEditor .Contacts.hidden {
@@ -76,6 +81,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     flex-shrink: 1;
+    text-align: left;
 }
 
 .ContactView .details .name {

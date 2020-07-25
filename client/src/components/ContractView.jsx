@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Typography, Divider, Button } from 'antd';
+import { message, Typography, Divider, Button } from 'antd';
 import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
@@ -28,7 +28,7 @@ export const ContractView = ({ contract, exit }) => {
         // TODO better detect completion
         setParticipants(await contract.getParticipants());
         setAddingParticipant(false);
-        console.log("Participant added")
+        message.success(`Added participant ${Contacts.addressToName(address)}`)
     }, [contract])
 
     return <div className="App-container">
@@ -51,7 +51,10 @@ export const ContractView = ({ contract, exit }) => {
                         <Divider />
                         <Button shape="round" type="primary" onClick={async () => {
                             await contract.sign();
-                            setSigned(await contract.checkSigned());
+                            const signed = await contract.checkSigned();
+                            setSigned(signed);
+                            if (signed === 1) message.success("Successfully signed contract")
+                            else message.warn("Unable to validate signature")
                         }}>Sign</Button>
                         <Button shape="round" style={{ marginLeft: 10 }} onClick={exit}>Back</Button>
                     </div>

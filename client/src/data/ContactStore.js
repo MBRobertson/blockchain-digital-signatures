@@ -1,9 +1,9 @@
 const DEFUALT_CONTACTS = {
     "0x0bbd91c075433599094fb973e55235d239d22f8b": {
-        name: "John Doe"
+        name: "John Smith"
     },
     "0xa5d844e32288304184efdd8ed45896b4d7ca853a": {
-        name: "Jane Sue"
+        name: "Jane Doe"
     }
 }
 
@@ -18,7 +18,7 @@ export const getContacts = () => {
 
 export const addContact = (address, data) => {
     let contacts = getContacts();
-    delete contacts[address.toLowerCase()];
+    contacts[address.toLowerCase()] = data;
     window.localStorage.setItem("contacts", JSON.stringify(contacts))
 }
 
