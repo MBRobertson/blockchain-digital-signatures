@@ -9,3 +9,7 @@
 .SignedContactView:last-of-type {
     border-bottom: none;
 }
+
+.ParticipantSelectPopover .confirm {
+    text-align: right;
+}

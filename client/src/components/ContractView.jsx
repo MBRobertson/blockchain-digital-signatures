@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { message, Typography, Divider, Button } from 'antd';
+import { message, Typography, Divider, Button, Popover } from 'antd';
 import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
@@ -12,12 +12,12 @@ export const ContractView = ({ contract, exit }) => {
     const [title, setTitle] = useState("Fetching Info...")
     // const [owner, setOwner] = useState("Fetching Info...")
     const [content, setContent] = useState("Fetching Info...")
-    const [signed, setSigned] = useState(-2)
+    // const [signed, setSigned] = useState(-2)
     const [participants, setParticipants] = useState([]);
     const [addingParticipant, setAddingParticipant] = useState(false);
 
     const refreshSig = useCallback(() => {
-        (async () => setSigned(await contract.checkSigned()))();
+        // (async () => setSigned(await contract.checkSigned()))();
         (async () => setParticipants(await contract.getParticipants()))();
     }, [contract]);
 
@@ -28,13 +28,13 @@ export const ContractView = ({ contract, exit }) => {
         // (async () => setOwner(Contacts.addressToName(await contract.getOwner())))();
     }, [contract, refreshSig]);
 
-    const addParticipant = useCallback(async (address) => {
+    const addParticipants = useCallback(async (addresses) => {
         setAddingParticipant(true);
-        await contract.addParticipant(address);
+        await contract.addManyParticipants(addresses);
         // TODO better detect completion
         setParticipants(await contract.getParticipants());
         setAddingParticipant(false);
-        message.success(`Added participant ${Contacts.addressToName(address)}`)
+        message.success(`Added ${addresses.length} participants`)
         refreshSig()
     }, [contract, refreshSig])
 
@@ -49,7 +49,7 @@ export const ContractView = ({ contract, exit }) => {
                     <Divider plain>Content Hash</Divider>
                     <Typography.Text>{content}</Typography.Text>
                     <Divider plain>Participants</Divider>
-                    <div class="participants">
+                    <div className="participants">
                         {
                             participants.map(address => {
                                 const data = { name: Contacts.addressToName(address) }
@@ -58,14 +58,19 @@ export const ContractView = ({ contract, exit }) => {
                         }
                     </div>
                     <div style={{ textAlign: "right", marginTop: 15 }}>
-                        <Button loading={addingParticipant} icon={<PlusCircleOutlined />} shape="round" type="secondary" onClick={() => {
+                        <ParticipantSelector 
+                            currentParticipants={participants} 
+                            loading={addingParticipant}
+                            onSubmit={addParticipants}
+                        />
+                        {/* <Button loading={addingParticipant} icon={<PlusCircleOutlined />} shape="round" type="secondary" onClick={() => {
                             addParticipant("0xa5d844e32288304184efdd8ed45896b4d7ca853a");
-                        }}>Add Participants</Button>
+                        }}>Add Participants</Button> */}
                         <Divider />
                         <Button shape="round" type="primary" onClick={async () => {
                             await contract.sign();
                             const signed = await contract.checkSigned();
-                            setSigned(signed);
+                            // setSigned(signed);
                             if (signed === 1) message.success("Successfully signed contract")
                             else message.warn("Unable to validate signature")
                             refreshSig()
@@ -77,6 +82,60 @@ export const ContractView = ({ contract, exit }) => {
         </div>
         <ContactEditor/>
     </div>
+}
+
+const ParticipantSelector = ({ onSubmit, currentParticipants, loading }) => {
+    const [visible, setVisible] = useState(false);
+    const [available, setAvailable] = useState([]);
+
+    useEffect(() => {
+        let available = Object.keys(Contacts.getContacts())
+
+        available = available.filter(address => !currentParticipants.map(a => a.toLowerCase()).includes(address.toLowerCase()))
+
+        setAvailable(available.map(a => [a, false]))
+    }, [currentParticipants])
+
+    const toggle = useCallback((address) => {
+        let avail = [...available];
+        const index = available.findIndex(a => a[0] === address)
+        avail[index][1] = !avail[index][1];
+        setAvailable(avail);
+    }, [available])
+
+    const submit = useCallback(() => {
+        const addresses = available.filter(a => a[1]).map(a => a[0])
+        setVisible(false)
+        if (onSubmit)
+            onSubmit(addresses);
+    }, [available, onSubmit])
+
+    return <Popover 
+        content={<div className="ParticipantSelectPopover">
+            {available.length > 0 && !loading ?
+            <><div className="title">Select Participants</div>
+            <div className="contacts">
+                {available.map(([address, selected]) => {
+                    const contact = Contacts.getContacts()[address]
+                    return <ContactView key={address} selected={selected} contact={contact} address={address} onClick={() => toggle(address)}/>
+                })}
+            </div>
+            <div className="confirm">
+                <Button onClick={submit} disabled={available.filter(a => a[1]).length === 0} size="small" type="primary" shape="round">
+                    Confirm
+                </Button>
+            </div></>
+            : <div className="title">No contacts found (that are not already participants)</div>}
+        </div>}
+        visible={visible} 
+        onVisibleChange={setVisible} 
+        trigger="click"
+        placement="topRight"
+        >
+        <Button loading={loading} icon={<PlusCircleOutlined />} shape="round" type="secondary">
+            Add Participants
+        </Button>
+    </Popover>
 }
 
 const SignedContactView = ({ address, contact, contract }) => {

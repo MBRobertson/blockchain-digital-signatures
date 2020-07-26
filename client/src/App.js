@@ -81,7 +81,7 @@ class App extends Component {
                   </div>
                 </div>
                 <div style={{ textAlign: "right", marginTop: 15 }}>
-                    <Button loading={this.state.processing} icon={<PlusCircleOutlined />} shape="round" type="secondary" onClick={() => {
+                    <Button type="primary" loading={this.state.processing} icon={<PlusCircleOutlined />} shape="round" onClick={() => {
                       this.createContract()
                     }}>Create New Contract</Button>
                   </div>

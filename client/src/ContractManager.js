@@ -137,6 +137,24 @@ class ContractContainer {
     }
   }
 
+  async addManyParticipants(addresses) {
+    const curParticipants = await this.getParticipants();
+
+    addresses = addresses.filter(a => !curParticipants.includes(a))
+    // Check that they aren't already a participant
+    if (addresses.length === 1) {
+      await this.addParticipant(addresses[0]) // Use cheaper version if only one
+    }
+    else if (addresses.length > 0) {
+      const account = (await accounts)[0]
+
+      await this.instance.methods.addManyParticipants(addresses).send({ from: account, gas: 1000000 });
+
+      // TODO: Better method of refreshing data
+      this.invalidate();
+    }
+  }
+
   async sign() {
     const account = (await accounts)[0]
     const w3 = await web3;

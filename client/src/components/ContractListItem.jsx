@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { EyeOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import './ContractListItem.css';
 import { SignedStatus } from './SignedStatus';
@@ -25,7 +26,7 @@ export const ContractListItem = ({ contract, onContractSelect }) => {
       </div>
       <div className="column right">
         <SignedStatus status={signed}/>
-        <Button shape="round" size="small" onClick={() => {
+        <Button icon={<EyeOutlined/>} shape="round" size="small" onClick={() => {
           if (onContractSelect) onContractSelect(contract);
         }}>View</Button>
       </div>

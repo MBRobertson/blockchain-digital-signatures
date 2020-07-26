@@ -27,6 +27,13 @@ contract BasicContract {
     }
   }
 
+  function addManyParticipants(address[] memory newParticipants) public {
+    // TODO Implement similar checking to above
+    for (uint i = 0; i < newParticipants.length; i++) {
+      addParticipant(newParticipants[i]);
+    }
+  }
+
   function sign(string memory signature) public {
     // Check they are allowed to sign the contract
     if (permissions[msg.sender]) {
@@ -124,5 +131,16 @@ contract ContractManager {
     // Automatically assign the contract to the creators personal contracts
     PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);
     pContracts.addContract(newContract);
+  }
+
+  function createContractWithParticipants(string memory title, string memory content, address[] memory participants) public {
+    BasicContract newContract = new BasicContract(msg.sender, title, this);
+    newContract.setContent(content);
+
+    // Automatically assign the contract to the creators personal contracts
+    PersonalContracts pContracts = getOrCreatePersonalContracts(msg.sender);
+    pContracts.addContract(newContract);
+
+    newContract.addManyParticipants(participants);
   }
 }
