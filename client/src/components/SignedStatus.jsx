@@ -8,7 +8,7 @@ export const SignedStatus = ({ status }) => {
             case -1:
                 return "Signed (Invalid)"
             case 0:
-                return "Not Signed"
+                return "Unsigned"
             case 1:
                 return "Signed"
             default:

@@ -51,6 +51,10 @@
     align-items: center;
 }
 
+.ContactView.clickable {
+    cursor: pointer;
+}
+
 .ContactView .pic {
     flex-shrink: 0;
     width: 35px;
@@ -62,6 +66,12 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 1);
+}
+
+.ContactView .pic.selected {
+    border: 1px solid rgba(3, 80, 0, 0.568);
+    background-color: rgb(193, 255, 196);
+    color: rgba(3, 80, 0, 0.568);
 }
 
 .ContactView .details {

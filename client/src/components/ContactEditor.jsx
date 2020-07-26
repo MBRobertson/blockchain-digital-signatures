@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Modal, Form, Button, Input } from 'antd';
-import { UserSwitchOutlined, UserAddOutlined, UserOutlined, DeleteOutlined, EditOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
+import { UserSwitchOutlined, UserAddOutlined, UserOutlined, DeleteOutlined, EditOutlined, ExclamationCircleOutlined, CheckOutlined } from '@ant-design/icons'
 
 import * as Contacts from '../data/ContactStore';
 
@@ -118,10 +118,10 @@ export const ContactEditor = () => {
     </div>
 }
 
-export const ContactView = ({ address, contact, onDelete, onEdit }) => {
+export const ContactView = ({ address, contact, onDelete, onEdit, selected, onClick }) => {
 
-    return <div className="ContactView">
-        <div className="pic"><UserOutlined/></div>
+    return <div className={"ContactView" + (onClick ? ' clickable' : '')} onClick={onClick}>
+        <div className={"pic" + (selected ? ' selected' : '')}>{selected ? <CheckOutlined /> : <UserOutlined/>}</div>
         <div className="details">
             <div className="name">{contact.name}</div>
             <div className="address">{address}</div>
