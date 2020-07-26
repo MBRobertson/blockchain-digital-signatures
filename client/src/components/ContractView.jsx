@@ -4,7 +4,7 @@ import { SignedStatus } from './SignedStatus';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
 
-import { ContactEditor } from './ContactEditor';
+import { ContactEditor, ContactView } from './ContactEditor';
 
 export const ContractView = ({ contract, exit }) => {
     const [title, setTitle] = useState("Fetching Info...")
@@ -43,7 +43,14 @@ export const ContractView = ({ contract, exit }) => {
                     <Divider plain>Content</Divider>
                     <Typography.Text>{content}</Typography.Text>
                     <Divider plain>Participants</Divider>
-                    <Typography.Text>{JSON.stringify(participants.map(Contacts.addressToName))}</Typography.Text>
+                    <div class="participants">
+                        {
+                            participants.map(address => {
+                                const data = { name: Contacts.addressToName(address) }
+                                return <ContactView address={address} key={address} contact={data}/>
+                            })
+                        }
+                    </div>
                     <div style={{ textAlign: "right", marginTop: 15 }}>
                         <Button loading={addingParticipant} icon={<PlusCircleOutlined />} shape="round" type="secondary" onClick={() => {
                             addParticipant("0xa5d844e32288304184efdd8ed45896b4d7ca853a");

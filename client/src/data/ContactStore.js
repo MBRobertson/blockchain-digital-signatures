@@ -29,7 +29,7 @@ export const deleteContact = (address) => {
 }
 
 export const addressToName = (address) => {
-    let name = address
+    let name = "Unknown Contact"
     let contacts = getContacts()
     if (contacts[address.toLowerCase()] && contacts[address.toLowerCase()].name) {
         name = contacts[address.toLowerCase()].name

@@ -53,30 +53,7 @@ export const ContactEditor = () => {
         })
     }
 
-    return <div className="ContactEditor">
-        <div className={`Contacts Card ${hidden ? 'hidden' : ''}`}>
-            <div className="title">Contacts</div>
-            <div className="list">
-                {Object.keys(contacts).length !== 0 ?
-                    Object.entries(contacts).map(([address, contact]) => <ContactView key={address} address={address} contact={contact} refresh={refresh}/>)
-                    :
-                    <span>No contacts</span>
-                }
-            </div>
-            <div className="actions">
-                <Button onClick={addContact} type="primary" shape="round" size="small" icon={<UserAddOutlined/>}>Add Contact</Button>
-            </div>
-        </div>
-        <div className="ButtonContainer">
-            <Button onClick={toggleMenu} size="large" type={hidden ? "primary" : ''} shape="circle" icon={<UserSwitchOutlined/>}></Button>
-        </div>
-    </div>
-}
-
-export const ContactView = ({ address, contact, refresh }) => {
-    const [form] = Form.useForm();
-
-    const deleteContact = () => {
+    const deleteContact = (contact, address) => {
         Modal.confirm({
             title: `Are you sure you want to delete ${contact.name} from your contacts?`,
             icon: <ExclamationCircleOutlined/>,
@@ -90,7 +67,7 @@ export const ContactView = ({ address, contact, refresh }) => {
         })
     }
 
-    const editContact = () => {
+    const editContact = (contact, address) => {
         Modal.confirm({
             title: 'Edit Contact Details',
             okText: 'Save',
@@ -120,6 +97,29 @@ export const ContactView = ({ address, contact, refresh }) => {
         })
     }
 
+    return <div className="ContactEditor">
+        <div className={`Contacts Card ${hidden ? 'hidden' : ''}`}>
+            <div className="title">Contacts</div>
+            <div className="list">
+                {Object.keys(contacts).length !== 0 ?
+                    Object.entries(contacts).map(([address, contact]) => 
+                        <ContactView key={address} address={address} contact={contact} onEdit={() => editContact(contact, address)} onDelete={() => deleteContact(contact, address)}/>)
+                    :
+                    <span>No contacts</span>
+                }
+            </div>
+            <div className="actions">
+                <Button onClick={addContact} type="primary" shape="round" size="small" icon={<UserAddOutlined/>}>Add Contact</Button>
+            </div>
+        </div>
+        <div className="ButtonContainer">
+            <Button onClick={toggleMenu} size="large" type={hidden ? "primary" : ''} shape="circle" icon={<UserSwitchOutlined/>}></Button>
+        </div>
+    </div>
+}
+
+export const ContactView = ({ address, contact, onDelete, onEdit }) => {
+
     return <div className="ContactView">
         <div className="pic"><UserOutlined/></div>
         <div className="details">
@@ -127,8 +127,8 @@ export const ContactView = ({ address, contact, refresh }) => {
             <div className="address">{address}</div>
         </div>
         <div className="actions">
-            <Button onClick={editContact} size="small" shape="round" icon={<EditOutlined/>}></Button>
-            <Button onClick={deleteContact} size="small" type="primary" shape="round" danger icon={<DeleteOutlined/>}></Button>
+            {onEdit ? <Button onClick={onEdit} size="small" shape="round" icon={<EditOutlined/>}></Button> : null}
+            {onDelete ? <Button onClick={onDelete} size="small" type="primary" shape="round" danger icon={<DeleteOutlined/>}></Button> : null}
         </div>
     </div>
 }
