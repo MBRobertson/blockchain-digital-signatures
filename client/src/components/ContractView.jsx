@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { message, Typography, Divider, Button, Popover } from 'antd';
+import { message, Typography, Divider, Button, Popover, Modal } from 'antd';
 import { SignedStatus } from './SignedStatus';
-import { PlusCircleOutlined } from '@ant-design/icons';
+import { PlusCircleOutlined, UploadOutlined } from '@ant-design/icons';
 import * as Contacts from '../data/ContactStore';
+
+import { useDropzone } from 'react-dropzone'
+import CryptoJS from 'crypto-js';
 
 import { ContactEditor, ContactView } from './ContactEditor';
 
@@ -39,8 +42,32 @@ export const ContractView = ({ contract, exit }) => {
         refreshSig()
     }, [contract, refreshSig])
 
+    const onDrop = useCallback(acceptedFiles => {
+        if (acceptedFiles.length === 0) return;
+
+        const reader = new FileReader();
+        reader.onload = () => {
+            const wa = CryptoJS.lib.WordArray.create(reader.result);
+            const hash = CryptoJS.SHA256(wa).toString()
+            if (hash === content) {
+                Modal.success({
+                    title: "Successfully verified hash",
+                    content: "This is the same document as the one used to create this contract"
+                })
+            } else {
+                Modal.error({
+                    title: "Failed to verify hash",
+                    content: "This is not the exact same document as the one used to create this contract"
+                })
+            }
+        }
+        reader.readAsArrayBuffer(acceptedFiles[0])
+    }, [content])
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, maxFiles: 1, multiple: false })
+
     return <div className="App-container">
-        <div className="App Card">
+        <div className="App Card ContractView">
             <Typography.Title level={2}>{title}</Typography.Title>
             <Divider />
             <div className="Card-content">
@@ -48,19 +75,25 @@ export const ContractView = ({ contract, exit }) => {
                     {/* <Divider plain>Address</Divider> */}
                     <Typography.Text>{contract.address}</Typography.Text>
                     <Divider plain>Content Hash</Divider>
-                    <Typography.Text>{content}</Typography.Text>
+                    <Typography.Text>SHA256:</Typography.Text><br/>
+                    <Typography.Text className="hash">{content}</Typography.Text>
+                    <div {...getRootProps({ className: `filedropzone ${isDragActive ? 'dragging' : ''}` })}>
+                        <input {...getInputProps()} />
+                        <UploadOutlined className="icon" />
+                        {isDragActive ? <div className="instruction">Drop file to validate hash!</div> : <div className="instruction">Click here or Drag a file to validate hash</div>}
+                    </div>
                     <Divider plain>Participants</Divider>
                     <div className="participants">
                         {
                             participants.map(address => {
                                 const data = { name: Contacts.addressToName(address) }
-                                return <SignedContactView address={address} key={address} contact={data} contract={contract}/>
+                                return <SignedContactView address={address} key={address} contact={data} contract={contract} />
                             })
                         }
                     </div>
                     <div style={{ textAlign: "right", marginTop: 15 }}>
-                        <ParticipantSelector 
-                            currentParticipants={participants} 
+                        <ParticipantSelector
+                            currentParticipants={participants}
                             loading={addingParticipant}
                             onSubmit={addParticipants}
                         />
@@ -81,7 +114,7 @@ export const ContractView = ({ contract, exit }) => {
                 </div>
             </div>
         </div>
-        <ContactEditor/>
+        <ContactEditor />
     </div>
 }
 
@@ -111,28 +144,28 @@ const ParticipantSelector = ({ onSubmit, currentParticipants, loading }) => {
             onSubmit(addresses);
     }, [available, onSubmit])
 
-    return <Popover 
+    return <Popover
         content={<div className="ParticipantSelectPopover">
             {available.length > 0 && !loading ?
-            <><div className="title">Select Participants</div>
-            <div className="contacts">
-                {available.map(([address, selected]) => {
-                    const contact = Contacts.getContacts()[address]
-                    return <ContactView key={address} selected={selected} contact={contact} address={address} onClick={() => toggle(address)}/>
-                })}
-            </div>
-            <div className="confirm">
-                <Button onClick={submit} disabled={available.filter(a => a[1]).length === 0} size="small" type="primary" shape="round">
-                    Confirm
+                <><div className="title">Select Participants</div>
+                    <div className="contacts">
+                        {available.map(([address, selected]) => {
+                            const contact = Contacts.getContacts()[address]
+                            return <ContactView key={address} selected={selected} contact={contact} address={address} onClick={() => toggle(address)} />
+                        })}
+                    </div>
+                    <div className="confirm">
+                        <Button onClick={submit} disabled={available.filter(a => a[1]).length === 0} size="small" type="primary" shape="round">
+                            Confirm
                 </Button>
-            </div></>
-            : <div className="title">No contacts found (that are not already participants)</div>}
+                    </div></>
+                : <div className="title">No contacts found (that are not already participants)</div>}
         </div>}
-        visible={visible} 
-        onVisibleChange={setVisible} 
+        visible={visible}
+        onVisibleChange={setVisible}
         trigger="click"
         placement="topRight"
-        >
+    >
         <Button loading={loading} icon={<PlusCircleOutlined />} shape="round" type="secondary">
             Add Participants
         </Button>
@@ -147,7 +180,7 @@ const SignedContactView = ({ address, contact, contract }) => {
     }, [address, contract])
 
     return <div className="SignedContactView">
-        <ContactView address={address} key={address} contact={contact} contract={contract}/>
+        <ContactView address={address} key={address} contact={contact} contract={contract} />
         <SignedStatus status={signed} />
     </div>
 }

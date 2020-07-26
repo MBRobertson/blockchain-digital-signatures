@@ -13,3 +13,7 @@
 .ParticipantSelectPopover .confirm {
     text-align: right;
 }
+
+.ContractView .hash {
+    font-size: 10px;
+}

@@ -165,7 +165,6 @@ class ContractContainer {
     await this.instance.methods.sign(sig).send({ from: account, gas: 1000000 })
     
     this.invalidate();
-    console.log("Sent!")
   }
 
   async checkSigned(signee) {
