@@ -4,6 +4,12 @@ const DEFUALT_CONTACTS = {
     },
     "0xa5d844e32288304184efdd8ed45896b4d7ca853a": {
         name: "Jane Doe"
+    },
+    "0xb5d844e32288304184efdd8ed45896b4d7ca853a": {
+        name: "Test 1"
+    },
+    "0xc5d844e32288304184efdd8ed45896b4d7ca853a": {
+        name: "Test 2"
     }
 }
 

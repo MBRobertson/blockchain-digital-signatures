@@ -18,6 +18,7 @@ export const ContractView = ({ contract, exit }) => {
 
     const refreshSig = useCallback(() => {
         // (async () => setSigned(await contract.checkSigned()))();
+        setParticipants([]);
         (async () => setParticipants(await contract.getParticipants()))();
     }, [contract]);
 

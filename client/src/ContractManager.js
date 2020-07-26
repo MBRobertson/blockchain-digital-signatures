@@ -223,7 +223,7 @@ class PersonalContractsContainer {
     );
   }
 
-  async createNewContract() {
+  async createNewContract({ name, hash }) {
     const account = (await accounts)[0];
     const managerInstance = await manager;
 
@@ -231,7 +231,7 @@ class PersonalContractsContainer {
       this.callbacks.push((address) => resolve(address))
     })
 
-    await managerInstance.methods.createContract("Sample Contract", "Hash Value").send({ from: account, gas: 1000000 })
+    await managerInstance.methods.createContract(name, hash).send({ from: account, gas: 1000000 })
 
     return await newAddress;
   }
